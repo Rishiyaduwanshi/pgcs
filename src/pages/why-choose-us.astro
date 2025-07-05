@@ -1,0 +1,261 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import { 
+  HeartPulse, 
+  Computer, 
+  RefreshCw, 
+  UserCheck, 
+  Users, 
+  BookOpen,
+  Bus,
+  Award,
+  Heart,
+  Lightbulb,
+  Star,
+  ArrowRight,
+} from 'lucide-astro';
+
+// Import data
+import whyChooseUsData from '../data/whyChooseUs.json';
+import schoolData from '../data/school-info.json';
+
+const { school, values } = schoolData;
+
+// Updated icon mapping
+const iconMap = {
+  HeartPulse,
+  Computer,
+  RefreshCw,
+  UserCheck,
+  Users,
+  BookOpen,
+  Bus,
+  Award,
+  Heart,
+  Lightbulb
+};
+---
+
+<Layout 
+  title="Why Choose Us - Paramount Grove Convent School" 
+  description="Discover what makes Paramount Grove Convent School unique. From yoga classes to computer education, transport facility to small class sizes - learn why we're the right choice for your child."
+>
+  <Navigation />
+  
+  <!-- Hero Section - Updated to match other pages -->
+  <section class="relative pt-20 md:pt-24 pb-12 md:pb-16 bg-gradient-to-br from-primary-600/20 via-accent-600/20 to-primary-800/20 overflow-hidden">
+    <div class="absolute inset-0 bg-pattern opacity-10"></div>
+    
+    <!-- Floating decorative elements -->
+    <div class="absolute top-10 md:top-20 left-5 md:left-10 w-12 h-12 md:w-16 md:h-16 bg-primary-400/20 rounded-full blur-lg animate-pulse"></div>
+    <div class="absolute bottom-10 md:bottom-20 right-5 md:right-10 w-16 h-16 md:w-24 md:h-24 bg-accent-400/20 rounded-full blur-lg animate-pulse delay-500"></div>
+    
+    <div class="container-custom relative">
+      <div class="text-center px-4">
+        <div class="inline-flex items-center px-3 md:px-4 py-2 bg-primary-600/20 text-primary-400 rounded-full border border-primary-600/30 backdrop-blur-sm mb-4 md:mb-6">
+          <Star size={16} class="mr-2" />
+          <span class="font-semibold text-sm md:text-base">{school.tagline}</span>
+        </div>
+        
+        <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6">
+          Why Choose <span class="text-primary-600">Paramount Grove</span>
+        </h1>
+        <p class="text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto mb-6 md:mb-8">
+          Discover what makes us different and why thousands of parents trust us with their children's education
+        </p>
+        
+        <!-- Key Statistics -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-8 max-w-4xl mx-auto">
+          <div class="bg-white/90 dark:bg-gray-800/90 rounded-xl p-4 backdrop-blur-sm shadow-sm">
+            <div class="text-2xl md:text-3xl font-bold text-primary-600 mb-1">8+</div>
+            <div class="text-xs md:text-sm text-gray-600 dark:text-gray-400">Years of Excellence</div>
+          </div>
+          
+          <div class="bg-white/90 dark:bg-gray-800/90 rounded-xl p-4 backdrop-blur-sm shadow-sm">
+            <div class="text-2xl md:text-3xl font-bold text-accent-600 mb-1">30</div>
+            <div class="text-xs md:text-sm text-gray-600 dark:text-gray-400">Max Students/Class</div>
+          </div>
+          
+          <div class="bg-white/90 dark:bg-gray-800/90 rounded-xl p-4 backdrop-blur-sm shadow-sm">
+            <div class="text-2xl md:text-3xl font-bold text-green-600 mb-1">100%</div>
+            <div class="text-xs md:text-sm text-gray-600 dark:text-gray-400">Individual Attention</div>
+          </div>
+          
+          <div class="bg-white/90 dark:bg-gray-800/90 rounded-xl p-4 backdrop-blur-sm shadow-sm">
+            <div class="text-2xl md:text-3xl font-bold text-purple-600 mb-1">🚌</div>
+            <div class="text-xs md:text-sm text-gray-600 dark:text-gray-400">Transport Available</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Features Section -->
+  <section class="py-12 md:py-16 bg-white dark:bg-gray-900">
+    <div class="container-custom px-4">
+      <div class="text-center mb-8 md:mb-12">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4">
+          What Makes Us <span class="text-primary-600">Special</span>
+        </h2>
+        <p class="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          Our unique approach to education combines traditional values with modern teaching methods and facilities
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {whyChooseUsData.map((feature, index) => {
+          const IconComponent = iconMap[feature.icon];
+          return (
+            <div class="group bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 dark:border-gray-700">
+              <div class="flex items-center mb-4 md:mb-6">
+                <div class="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-primary-600 to-accent-600 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                  <IconComponent class="text-white" size={24} />
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary-600 transition-colors duration-300">
+                    {feature.title}
+                  </h3>
+                </div>
+              </div>
+              <p class="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+                {feature.description}
+              </p>
+              
+              <!-- Hover indicator -->
+              <div class="mt-4 flex items-center text-primary-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span class="text-sm font-medium">Learn More</span>
+                <ArrowRight size={16} class="ml-2" />
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- Unique Features Highlight - Fixed mobile icons -->
+  <section class="py-12 md:py-16 bg-gradient-to-br from-gray-50 to-primary-50 dark:from-gray-800 dark:to-primary-900/20">
+    <div class="container-custom px-4">
+      <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+        <!-- Content -->
+        <div class="order-2 lg:order-1">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6">
+            Education That <span class="text-primary-600">Transforms</span>
+          </h2>
+          <p class="text-base md:text-lg text-gray-600 dark:text-gray-300 mb-6 md:mb-8">
+            At Paramount Grove, we don't just teach subjects – we nurture complete individuals ready to face tomorrow's challenges.
+          </p>
+          
+          <div class="space-y-4 md:space-y-6">
+            <div class="flex items-start">
+              <div class="w-10 h-10 md:w-12 md:h-12 bg-primary-600 rounded-full flex items-center justify-center mr-3 md:mr-4 mt-1 flex-shrink-0">
+                <HeartPulse class="text-white" size={16} />
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 dark:text-white mb-2 text-sm md:text-base">Holistic Development</h4>
+                <p class="text-xs md:text-sm text-gray-600 dark:text-gray-300">Physical, mental, and emotional growth through weekly yoga sessions</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="w-10 h-10 md:w-12 md:h-12 bg-accent-600 rounded-full flex items-center justify-center mr-3 md:mr-4 mt-1 flex-shrink-0">
+                <Computer class="text-white" size={16} />
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 dark:text-white mb-2 text-sm md:text-base">Future-Ready Skills</h4>
+                <p class="text-xs md:text-sm text-gray-600 dark:text-gray-300">Digital literacy from Class 1 to prepare for the modern world</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="w-10 h-10 md:w-12 md:h-12 bg-green-600 rounded-full flex items-center justify-center mr-3 md:mr-4 mt-1 flex-shrink-0">
+                <Bus class="text-white" size={16} />
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 dark:text-white mb-2 text-sm md:text-base">Transport Facility</h4>
+                <p class="text-xs md:text-sm text-gray-600 dark:text-gray-300">Safe and reliable transportation for students across nearby areas</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="w-10 h-10 md:w-12 md:h-12 bg-purple-600 rounded-full flex items-center justify-center mr-3 md:mr-4 mt-1 flex-shrink-0">
+                <RefreshCw class="text-white" size={16} />
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 dark:text-white mb-2 text-sm md:text-base">No Bureaucracy</h4>
+                <p class="text-xs md:text-sm text-gray-600 dark:text-gray-300">Streamlined admission process without yearly re-admission hassles</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Image/Visual -->
+        <div class="order-1 lg:order-2">
+          <div class="relative">
+            <div class="bg-gradient-to-br from-primary-600 to-accent-600 rounded-2xl p-8 md:p-12 text-white">
+              <div class="text-center">
+                <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Award class="text-white" size={40} />
+                </div>
+                <h3 class="text-xl md:text-2xl font-bold mb-4">8 Years of Excellence</h3>
+                <p class="text-white/90 mb-6">
+                  Since 2017, we've been committed to providing quality education that shapes future leaders.
+                </p>
+                <div class="grid grid-cols-2 gap-4 text-center">
+                  <div>
+                    <div class="text-2xl font-bold">30</div>
+                    <div class="text-sm text-white/80">Max Students per Class</div>
+                  </div>
+                  <div>
+                    <div class="text-2xl font-bold">Focused & Caring</div>
+                    <div class="text-sm text-white/80">Dedicated Teaching Team"</div>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-12 md:py-16 bg-gradient-to-r from-primary-600 to-accent-600">
+    <div class="container-custom px-4 text-center">
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6">
+        Ready to Join Our Family?
+      </h2>
+      <p class="text-base md:text-xl text-white/90 mb-6 md:mb-8 max-w-2xl mx-auto">
+        Experience the difference of quality education with personalized attention and holistic development.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="/admissions" class="w-full sm:w-auto inline-flex items-center justify-center px-6 md:px-8 py-3 bg-white text-primary-600 font-semibold rounded-full hover:bg-gray-100 transition-colors duration-300">
+          Apply for Admission
+          <ArrowRight class="ml-2" size={18} />
+        </a>
+        <a href="/contact" class="w-full sm:w-auto inline-flex items-center justify-center px-6 md:px-8 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-primary-600 transition-colors duration-300">
+          Visit Our Campus
+          <Users class="ml-2" size={18} />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  .bg-pattern {
+    background-image: radial-gradient(circle at 25% 25%, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+  }
+  
+  /* Enhanced mobile responsiveness */
+  @media (max-width: 640px) {
+    .container-custom {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+</style>

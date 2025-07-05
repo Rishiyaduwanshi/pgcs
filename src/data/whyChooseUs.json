@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Yoga from Early Classes",
+        "description": "Weekly yoga sessions are conducted from lower classes to build discipline, focus, and physical health.",
+        "icon": "HeartPulse"
+    },
+    {
+        "title": "Computer Education from Class 1",
+        "description": "We introduce computer learning from Class 1 to build digital literacy early on.",
+        "icon": "Computer"
+    },
+    {
+        "title": "No Re-admission Hassle",
+        "description": "We believe in continuous learning; hence, we do not require students to re-apply every year.",
+        "icon": "RefreshCw"
+    },
+    {
+        "title": "Individual Attention to Weak Students",
+        "description": "We provide special academic support to students who need extra help, with personalized guidance and follow-up.",
+        "icon": "UserCheck"
+    },
+    {
+        "title": "Maximum 30 Students per Class",
+        "description": "Each classroom is limited to 30 students to ensure personal attention and better engagement.",
+        "icon": "Users"
+    },
+    {
+        "title": "Foundational Moral & Cultural Education",
+        "description": "Students are exposed to moral values and cultural programs to build character and confidence.",
+        "icon": "BookOpen"
+    },
+    {
+        "title": "Transport Facility Available",
+        "description": "Transport facility is available for students across nearby areas.",
+        "icon": "Bus"
+    }
+]
