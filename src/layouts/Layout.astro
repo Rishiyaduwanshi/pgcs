@@ -1,5 +1,16 @@
 ---
-const { title = 'Paramount Grove Convent School', description = 'Welcome to Paramount Grove Convent School - Creating a Brighter Future through quality education and holistic development.' } = Astro.props;
+const { 
+  title = 'Paramount Grove Convent School - Best School in Darbhanga, Bihar', 
+  description = 'Paramount Grove Convent School offers quality education in Darbhanga, Bihar. Established in 2017, we provide holistic development with computer education from Class 1, yoga sessions, and individual attention.', 
+  keywords = 'Paramount Grove Convent School, best school Darbhanga, quality education Bihar, PGCS, computer education, yoga classes, small class size, admission open',
+  author = 'Paramount Grove Convent School',
+  type = 'website'
+} = Astro.props;
+
+// Fix canonical URL generation
+const baseURL = Astro.site || 'https://paramountgrove.in';
+const canonicalURL = new URL(Astro.url.pathname, baseURL);
+const currentURL = canonicalURL.href;
 ---
 
 <!doctype html>
@@ -7,29 +18,103 @@ const { title = 'Paramount Grove Convent School', description = 'Welcome to Para
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/images/schoolLogo.png" />
+    <link rel="icon" type="image/png" href="/images/bg-removed-logo.png" />
     <meta name="generator" content={Astro.generator} />
+    
+    <!-- Primary Meta Tags -->
     <title>{title}</title>
+    <meta name="title" content={title} />
     <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content={author} />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
     
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url} />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={currentURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:image" content={`${baseURL}/images/og-image.jpg`} />
+    <meta property="og:site_name" content="Paramount Grove Convent School" />
+    <meta property="og:locale" content="en_US" />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:url" content={currentURL} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={`${baseURL}/images/og-image.jpg`} />
+    <meta property="twitter:creator" content="@ParamountGrove" />
+    
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#3B82F6" />
+    <meta name="msapplication-TileColor" content="#3B82F6" />
+    
+    <!-- Geo Location -->
+    <meta name="geo.region" content="IN-BR" />
+    <meta name="geo.placename" content="Darbhanga, Bihar" />
+    <meta name="geo.position" content="26.1192469;85.90809589999999" />
+    <meta name="ICBM" content="26.1192469, 85.90809589999999" />
+    
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Paramount Grove Convent School",
+      "alternateName": "PGCS",
+      "url": "https://paramountgrove.in",
+      "logo": "https://paramountgrove.in/images/bg-removed-logo.png",
+      "description": "Quality education in Darbhanga, Bihar with holistic development approach",
+      "foundingDate": "2017",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rs Tank Navtoliya Near RB Memorial Nursing School",
+        "addressLocality": "Laheriasarai",
+        "addressRegion": "Bihar",
+        "postalCode": "846001",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-8540982656",
+        "contactType": "admissions",
+        "availableLanguage": ["English", "Hindi"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/paramountgrove",
+        "https://www.instagram.com/paramountgrove"
+      ]
+    }
+    </script>
     
     <!-- Preload critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="//www.google-analytics.com" />
+    
+    <!-- Favicon variants -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body class="antialiased min-h-screen bg-secondary-900 mx-5">
     <slot />
+    
+    <!-- Google Analytics (replace with your GA4 ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FGFQZ8YDJR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
   </body>
 </html>
 
