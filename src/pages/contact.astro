@@ -1,73 +1,122 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
-import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare, Calendar } from 'lucide-astro';
+import Footer from '../components/Footer.astro'
+import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare } from 'lucide-astro';
 ---
 
-<Layout title="Contact Us - PGCS" description="Get in touch with Paramount Grove Convent School. Find our contact information, address, and reach out for admissions or inquiries.">
+<Layout title="Contact Us - Paramount Grove Convent School" description="Get in touch with Paramount Grove Convent School. Find our contact information, address, and reach out for admissions or inquiries.">
   <Navigation />
   
   <!-- Hero Section -->
-  <section class="section-padding bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden">
-    <div class="absolute inset-0 bg-mesh opacity-30"></div>
-    <div class="container-custom relative z-10">
-      <div class="text-center">
-        <h1 class="heading-1 mb-6 text-glow">Contact Us</h1>
-        <p class="text-lead max-w-4xl mx-auto">
-          We'd love to hear from you. Get in touch with us for admissions, 
-          inquiries, or to schedule a visit to our campus.
+  <section class="relative pt-20 md:pt-24 pb-12 md:pb-16 bg-gradient-to-br from-primary-600/20 via-accent-600/20 to-primary-800/20 overflow-hidden">
+    <div class="absolute inset-0 bg-pattern opacity-10"></div>
+    
+    <!-- Floating decorative elements -->
+    <div class="absolute top-10 md:top-20 left-5 md:left-10 w-12 h-12 md:w-16 md:h-16 bg-primary-400/20 rounded-full blur-lg animate-pulse"></div>
+    <div class="absolute bottom-10 md:bottom-20 right-5 md:right-10 w-16 h-16 md:w-24 md:h-24 bg-accent-400/20 rounded-full blur-lg animate-pulse delay-500"></div>
+    
+    <div class="container-custom relative">
+      <div class="text-center px-4">
+        <div class="inline-flex items-center px-3 md:px-4 py-2 bg-primary-600/20 text-primary-400 rounded-full border border-primary-600/30 backdrop-blur-sm mb-4 md:mb-6">
+          <MessageSquare size={16} class="mr-2" />
+          <span class="font-semibold text-sm md:text-base">Get in Touch</span>
+        </div>
+        
+        <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6">
+          Contact <span class="text-primary-600">Us</span>
+        </h1>
+        <p class="text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto mb-6 md:mb-8">
+          We'd love to hear from you. Get in touch with us for admissions, inquiries, or any questions you may have.
         </p>
       </div>
     </div>
   </section>
 
   <!-- Contact Information -->
-  <section class="section-padding bg-gray-800">
-    <div class="container-custom">
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+  <section class="py-12 md:py-16 bg-white dark:bg-gray-900">
+    <div class="container-custom px-4">
+      <div class="text-center mb-8 md:mb-12">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4">
+          How to <span class="text-primary-600">Reach Us</span>
+        </h2>
+        <p class="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          Multiple ways to connect with us for all your educational needs
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         <!-- Address -->
-        <div class="card p-6 text-center">
-          <MapPin class="text-blue-400 mx-auto mb-4" size={48} />
-          <h3 class="text-xl font-semibold mb-3">Visit Us</h3>
-          <p class="text-gray-300 text-sm leading-relaxed">
-            Paramount Grove Convent School<br>
-            123 Education Lane<br>
-            Sector 15, New Delhi<br>
-            India - 110001
-          </p>
+        <div class="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-br from-primary-600 to-accent-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <MapPin class="text-white" size={28} />
+            </div>
+            <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-4">Visit Us</h3>
+            <p class="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+              Paramount Grove Convent School<br>
+              Rs Tank Navtoliya Near RB Memorial Nursing School<br>
+              Laheriasarai, Darbhanga<br>
+              Bihar, India
+            </p>
+          </div>
         </div>
 
         <!-- Phone -->
-        <div class="card p-6 text-center">
-          <Phone class="text-green-400 mx-auto mb-4" size={48} />
-          <h3 class="text-xl font-semibold mb-3">Call Us</h3>
-          <div class="space-y-2 text-gray-300 text-sm">
-            <p>Main Office: <a href="tel:+91-11-12345678" class="text-green-400 hover:text-green-300">+91-11-12345678</a></p>
-            <p>Admissions: <a href="tel:+91-11-12345679" class="text-green-400 hover:text-green-300">+91-11-12345679</a></p>
-            <p>Emergency: <a href="tel:+91-11-12345680" class="text-green-400 hover:text-green-300">+91-11-12345680</a></p>
+        <div class="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-br from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Phone class="text-white" size={28} />
+            </div>
+            <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-4">Call Us</h3>
+            <div class="space-y-2 text-sm md:text-base text-gray-600 dark:text-gray-300">
+              <p><a href="tel:+918540982656" class="text-green-600 hover:text-green-700 transition-colors">+91 8540982656</a></p>
+              <p><a href="tel:+919473243629" class="text-green-600 hover:text-green-700 transition-colors">+91 9473243629</a></p>
+            </div>
           </div>
         </div>
 
         <!-- Email -->
-        <div class="card p-6 text-center">
-          <Mail class="text-purple-400 mx-auto mb-4" size={48} />
-          <h3 class="text-xl font-semibold mb-3">Email Us</h3>
-          <div class="space-y-2 text-gray-300 text-sm">
-            <p><a href="mailto:info@pgcs.edu.in" class="text-purple-400 hover:text-purple-300">info@pgcs.edu.in</a></p>
-            <p><a href="mailto:admissions@pgcs.edu.in" class="text-purple-400 hover:text-purple-300">admissions@pgcs.edu.in</a></p>
-            <p><a href="mailto:principal@pgcs.edu.in" class="text-purple-400 hover:text-purple-300">principal@pgcs.edu.in</a></p>
+        <div class="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 md:col-span-2 lg:col-span-1">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Mail class="text-white" size={28} />
+            </div>
+            <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-4">Email Us</h3>
+            <div class="space-y-2 text-sm md:text-base text-gray-600 dark:text-gray-300">
+              <p><a href="mailto:contact@paramountgrove.in" class="text-purple-600 hover:text-purple-700 transition-colors break-all">contact@paramountgrove.in</a></p>
+              <p><a href="mailto:bkpankaj1976@gmail.com" class="text-purple-600 hover:text-purple-700 transition-colors break-all">bkpankaj1976@gmail.com</a></p>
+            </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Hours -->
-        <div class="card p-6 text-center">
-          <Clock class="text-yellow-400 mx-auto mb-4" size={48} />
-          <h3 class="text-xl font-semibold mb-3">Office Hours</h3>
-          <div class="space-y-2 text-gray-300 text-sm">
-            <p><strong>Monday - Friday:</strong><br>8:00 AM - 4:00 PM</p>
-            <p><strong>Saturday:</strong><br>9:00 AM - 1:00 PM</p>
-            <p><strong>Sunday:</strong><br>Closed</p>
+  <!-- Office Hours -->
+  <section class="py-12 md:py-16 bg-gradient-to-br from-gray-50 to-primary-50 dark:from-gray-800 dark:to-primary-900/20">
+    <div class="container-custom px-4">
+      <div class="max-w-2xl mx-auto">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-br from-amber-600 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Clock class="text-white" size={28} />
+            </div>
+            <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-4">Office Hours</h3>
+            <div class="space-y-3 text-sm md:text-base text-gray-600 dark:text-gray-300">
+              <div class="flex justify-between items-center">
+                <span class="font-medium">Monday - Friday:</span>
+                <span>8:00 AM - 01:00 PM</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="font-medium">Monday:</span>
+                <span>08:00 AM - 12:00 PM</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="font-medium">Sunday:</span>
+                <span class="text-red-500">Closed</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -75,21 +124,23 @@ import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare, Calendar } from 
   </section>
 
   <!-- Contact Form -->
-  <section class="section-padding bg-gray-900">
-    <div class="container-custom">
+  <section class="py-12 md:py-16 bg-white dark:bg-gray-900">
+    <div class="container-custom px-4">
       <div class="max-w-4xl mx-auto">
-        <div class="text-center mb-12">
-          <h2 class="heading-2 mb-6">Send Us a Message</h2>
-          <p class="text-lead max-w-2xl mx-auto">
-            Have a question or want to schedule a visit? Fill out the form below and we'll get back to you soon.
+        <div class="text-center mb-8 md:mb-12">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4">
+            Send Us a <span class="text-primary-600">Message</span>
+          </h2>
+          <p class="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Have a question or want to know more about our school? Fill out the form below and we'll get back to you soon.
           </p>
         </div>
         
-        <div class="card p-8">
+        <div class="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200 dark:border-gray-700">
           <form class="space-y-6">
-            <div class="grid md:grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div>
-                <label for="firstName" class="block text-sm font-medium text-gray-300 mb-2">First Name *</label>
+                <label for="firstName" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">First Name *</label>
                 <div class="relative">
                   <User class="absolute left-3 top-3 text-gray-400" size={20} />
                   <input 
@@ -97,14 +148,14 @@ import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare, Calendar } from 
                     id="firstName" 
                     name="firstName" 
                     required
-                    class="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-blue-400 focus:ring-1 focus:ring-blue-400 text-white placeholder-gray-400"
+                    class="w-full pl-10 pr-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-colors"
                     placeholder="Enter your first name"
                   />
                 </div>
               </div>
               
               <div>
-                <label for="lastName" class="block text-sm font-medium text-gray-300 mb-2">Last Name *</label>
+                <label for="lastName" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Last Name *</label>
                 <div class="relative">
                   <User class="absolute left-3 top-3 text-gray-400" size={20} />
                   <input 
@@ -112,16 +163,16 @@ import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare, Calendar } from 
                     id="lastName" 
                     name="lastName" 
                     required
-                    class="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-blue-400 focus:ring-1 focus:ring-blue-400 text-white placeholder-gray-400"
+                    class="w-full pl-10 pr-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-colors"
                     placeholder="Enter your last name"
                   />
                 </div>
               </div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div>
-                <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address *</label>
+                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email Address *</label>
                 <div class="relative">
                   <Mail class="absolute left-3 top-3 text-gray-400" size={20} />
                   <input 
@@ -129,21 +180,21 @@ import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare, Calendar } from 
                     id="email" 
                     name="email" 
                     required
-                    class="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-blue-400 focus:ring-1 focus:ring-blue-400 text-white placeholder-gray-400"
+                    class="w-full pl-10 pr-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-colors"
                     placeholder="Enter your email address"
                   />
                 </div>
               </div>
               
               <div>
-                <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
+                <label for="phone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Phone Number</label>
                 <div class="relative">
                   <Phone class="absolute left-3 top-3 text-gray-400" size={20} />
                   <input 
                     type="tel" 
                     id="phone" 
                     name="phone"
-                    class="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-blue-400 focus:ring-1 focus:ring-blue-400 text-white placeholder-gray-400"
+                    class="w-full pl-10 pr-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-colors"
                     placeholder="Enter your phone number"
                   />
                 </div>
@@ -151,26 +202,7 @@ import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare, Calendar } from 
             </div>
 
             <div>
-              <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">Subject *</label>
-              <select 
-                id="subject" 
-                name="subject" 
-                required
-                class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-blue-400 focus:ring-1 focus:ring-blue-400 text-white"
-              >
-                <option value="">Select a subject</option>
-                <option value="admissions">Admissions Inquiry</option>
-                <option value="general">General Information</option>
-                <option value="facilities">Facilities Tour</option>
-                <option value="academics">Academic Programs</option>
-                <option value="careers">Career Opportunities</option>
-                <option value="feedback">Feedback</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-
-            <div>
-              <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message *</label>
+              <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message *</label>
               <div class="relative">
                 <MessageSquare class="absolute left-3 top-3 text-gray-400" size={20} />
                 <textarea 
@@ -178,7 +210,7 @@ import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare, Calendar } from 
                   name="message" 
                   rows="6" 
                   required
-                  class="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-blue-400 focus:ring-1 focus:ring-blue-400 text-white placeholder-gray-400 resize-none"
+                  class="w-full pl-10 pr-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 resize-none transition-colors"
                   placeholder="Tell us about your inquiry or how we can help you..."
                 ></textarea>
               </div>
@@ -187,7 +219,7 @@ import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare, Calendar } from 
             <div class="text-center">
               <button 
                 type="submit" 
-                class="btn-primary inline-flex items-center px-8 py-3"
+                class="inline-flex items-center px-8 py-3 bg-gradient-to-r from-primary-600 to-accent-600 text-white font-semibold rounded-full hover:from-primary-700 hover:to-accent-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 <Send class="mr-2" size={20} />
                 Send Message
@@ -200,26 +232,32 @@ import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare, Calendar } from 
   </section>
 
   <!-- Map Section -->
-  <section class="section-padding bg-gray-800">
-    <div class="container-custom">
-      <div class="text-center mb-12">
-        <h2 class="heading-2 mb-6">Find Us</h2>
-        <p class="text-lead max-w-2xl mx-auto">
-          Located in the heart of New Delhi, our campus is easily accessible by public transport and private vehicles.
+  <section class="py-12 md:py-16 bg-gradient-to-br from-gray-50 to-primary-50 dark:from-gray-800 dark:to-primary-900/20">
+    <div class="container-custom px-4">
+      <div class="text-center mb-8 md:mb-12">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4">
+          Find <span class="text-primary-600">Us</span>
+        </h2>
+        <p class="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          Located in Darbhanga, Laheriasarai, Bihar - easily accessible and well-connected to the city
         </p>
       </div>
       
-      <div class="card p-2">
-        <div class="bg-gray-700 rounded-lg h-96 flex items-center justify-center">
-          <div class="text-center">
-            <MapPin class="text-blue-400 mx-auto mb-4" size={48} />
-            <p class="text-gray-300 mb-2">Interactive Map</p>
-            <p class="text-gray-400 text-sm">
-              123 Education Lane, Sector 15, New Delhi, India - 110001
-            </p>
-            <a href="https://maps.google.com" target="_blank" class="text-blue-400 hover:text-blue-300 text-sm">
-              View on Google Maps →
-            </a>
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-lg border border-gray-200 dark:border-gray-700">
+          <div class="bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 rounded-lg h-64 md:h-96 flex items-center justify-center">
+            <div class="text-center">
+              <MapPin class="text-primary-600 mx-auto mb-4" size={48} />
+              <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-2">Our Location</h3>
+              <p class="text-sm md:text-base text-gray-600 dark:text-gray-300 mb-4">
+                Paramount Grove Convent School<br>
+                Rs Tank Navtoliya Near RB Memorial Nursing School, Laheriasarai, Darbhanga<br>
+                Bihar, India
+              </p>
+              <a href="https://maps.app.goo.gl/rQNFSiNJVCHrmtPS7" target="_blank" class="inline-flex items-center px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-sm">
+                View on Google Maps
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -227,42 +265,21 @@ import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare, Calendar } from 
   </section>
 
   <!-- Quick Actions -->
-  <section class="section-padding bg-gray-900">
-    <div class="container-custom">
-      <div class="text-center mb-12">
-        <h2 class="heading-2 mb-6">Quick Actions</h2>
-        <p class="text-lead max-w-2xl mx-auto">
-          Need something specific? Here are some quick actions to help you get started.
-        </p>
-      </div>
-      
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="card p-6 text-center">
-          <Calendar class="text-blue-400 mx-auto mb-4" size={48} />
-          <h3 class="text-xl font-semibold mb-3">Schedule a Visit</h3>
-          <p class="text-gray-300 text-sm mb-4">
-            Book a campus tour and see our facilities firsthand.
-          </p>
-          <a href="/visit" class="btn-primary">Book Tour</a>
-        </div>
-
-        <div class="card p-6 text-center">
-          <User class="text-green-400 mx-auto mb-4" size={48} />
-          <h3 class="text-xl font-semibold mb-3">Admissions</h3>
-          <p class="text-gray-300 text-sm mb-4">
-            Start your child's journey with us. Apply for admission today.
-          </p>
-          <a href="/admissions" class="btn-accent">Apply Now</a>
-        </div>
-
-        <div class="card p-6 text-center">
-          <MessageSquare class="text-purple-400 mx-auto mb-4" size={48} />
-          <h3 class="text-xl font-semibold mb-3">Ask a Question</h3>
-          <p class="text-gray-300 text-sm mb-4">
-            Have a specific question? Our team is here to help.
-          </p>
-          <a href="#contact-form" class="btn-secondary">Contact Us</a>
-        </div>
+  <section class="py-12 md:py-16 bg-gradient-to-r from-primary-600 to-accent-600">
+    <div class="container-custom px-4 text-center">
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6">
+        Ready to Get Started?
+      </h2>
+      <p class="text-base md:text-xl text-white/90 mb-6 md:mb-8 max-w-2xl mx-auto">
+        Join our school community and give your child the best education possible.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="/admissions" class="w-full sm:w-auto inline-flex items-center justify-center px-6 md:px-8 py-3 bg-white text-primary-600 font-semibold rounded-full hover:bg-gray-100 transition-colors duration-300">
+          Apply for Admission
+        </a>
+        <a href="/about" class="w-full sm:w-auto inline-flex items-center justify-center px-6 md:px-8 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-primary-600 transition-colors duration-300">
+          Learn More About Us
+        </a>
       </div>
     </div>
   </section>
@@ -270,18 +287,16 @@ import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare, Calendar } from 
   <Footer />
 </Layout>
 
-<script>
-  // Add smooth scrolling for contact form link
-  document.addEventListener('DOMContentLoaded', function() {
-    const contactLink = document.querySelector('a[href="#contact-form"]');
-    if (contactLink) {
-      contactLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        const form = document.querySelector('form');
-        if (form) {
-          form.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
+<style>
+  .bg-pattern {
+    background-image: radial-gradient(circle at 25% 25%, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+  }
+  
+  /* Enhanced mobile responsiveness */
+  @media (max-width: 640px) {
+    .container-custom {
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
-  });
-</script>
+  }
+</style>
