@@ -1,33 +1,59 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro'
-import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare } from 'lucide-astro';
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Send,
+  User,
+  MessageSquare,
+} from "lucide-astro";
 ---
 
-<Layout title="Contact Us - Paramount Grove Convent School" description="Get in touch with Paramount Grove Convent School. Find our contact information, address, and reach out for admissions or inquiries.">
+<Layout
+  title="Contact Us - Paramount Grove Convent School"
+  description="Get in touch with Paramount Grove Convent School. Find our contact information, address, and reach out for admissions or inquiries."
+>
   <Navigation />
-  
+
   <!-- Hero Section -->
-  <section class="relative pt-20 md:pt-24 pb-12 md:pb-16 bg-gradient-to-br from-primary-600/20 via-accent-600/20 to-primary-800/20 overflow-hidden">
+  <section
+    class="relative pt-20 md:pt-24 pb-12 md:pb-16 bg-gradient-to-br from-primary-600/20 via-accent-600/20 to-primary-800/20 overflow-hidden"
+  >
     <div class="absolute inset-0 bg-pattern opacity-10"></div>
-    
+
     <!-- Floating decorative elements -->
-    <div class="absolute top-10 md:top-20 left-5 md:left-10 w-12 h-12 md:w-16 md:h-16 bg-primary-400/20 rounded-full blur-lg animate-pulse"></div>
-    <div class="absolute bottom-10 md:bottom-20 right-5 md:right-10 w-16 h-16 md:w-24 md:h-24 bg-accent-400/20 rounded-full blur-lg animate-pulse delay-500"></div>
-    
+    <div
+      class="absolute top-10 md:top-20 left-5 md:left-10 w-12 h-12 md:w-16 md:h-16 bg-primary-400/20 rounded-full blur-lg animate-pulse"
+    >
+    </div>
+    <div
+      class="absolute bottom-10 md:bottom-20 right-5 md:right-10 w-16 h-16 md:w-24 md:h-24 bg-accent-400/20 rounded-full blur-lg animate-pulse delay-500"
+    >
+    </div>
+
     <div class="container-custom relative">
       <div class="text-center px-4">
-        <div class="inline-flex items-center px-3 md:px-4 py-2 bg-primary-600/20 text-primary-400 rounded-full border border-primary-600/30 backdrop-blur-sm mb-4 md:mb-6">
+        <div
+          class="inline-flex items-center px-3 md:px-4 py-2 bg-primary-600/20 text-primary-400 rounded-full border border-primary-600/30 backdrop-blur-sm mb-4 md:mb-6"
+        >
           <MessageSquare size={16} class="mr-2" />
           <span class="font-semibold text-sm md:text-base">Get in Touch</span>
         </div>
-        
-        <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6">
+
+        <h1
+          class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6"
+        >
           Contact <span class="text-primary-600">Us</span>
         </h1>
-        <p class="text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto mb-6 md:mb-8">
-          We'd love to hear from you. Get in touch with us for admissions, inquiries, or any questions you may have.
+        <p
+          class="text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto mb-6 md:mb-8"
+        >
+          We'd love to hear from you. Get in touch with us for admissions,
+          inquiries, or any questions you may have.
         </p>
       </div>
     </div>
@@ -37,55 +63,111 @@ import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare } from 'lucide-as
   <section class="py-12 md:py-16 bg-white dark:bg-gray-900">
     <div class="container-custom px-4">
       <div class="text-center mb-8 md:mb-12">
-        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4">
+        <h2
+          class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4"
+        >
           How to <span class="text-primary-600">Reach Us</span>
         </h2>
-        <p class="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+        <p
+          class="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
+        >
           Multiple ways to connect with us for all your educational needs
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+      >
         <!-- Address -->
-        <div class="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+        <div
+          class="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
+        >
           <div class="text-center">
-            <div class="w-16 h-16 bg-gradient-to-br from-primary-600 to-accent-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-primary-600 to-accent-600 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
               <MapPin class="text-white" size={28} />
             </div>
-            <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-4">Visit Us</h3>
-            <p class="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
-              Paramount Grove Convent School<br>
-              Rs Tank Navtoliya Near RB Memorial Nursing School<br>
-              Laheriasarai, Darbhanga<br>
+            <h3
+              class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-4"
+            >
+              Visit Us
+            </h3>
+            <p
+              class="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed"
+            >
+              Paramount Grove Convent School<br />
+              Rs Tank Navtoliya Near RB Memorial Nursing School<br />
+              Laheriasarai, Darbhanga<br />
               Bihar, India
             </p>
           </div>
         </div>
 
         <!-- Phone -->
-        <div class="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+        <div
+          class="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
+        >
           <div class="text-center">
-            <div class="w-16 h-16 bg-gradient-to-br from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
               <Phone class="text-white" size={28} />
             </div>
-            <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-4">Call Us</h3>
-            <div class="space-y-2 text-sm md:text-base text-gray-600 dark:text-gray-300">
-              <p><a href="tel:+918540982656" class="text-green-600 hover:text-green-700 transition-colors">+91 8540982656</a></p>
-              <p><a href="tel:+919473243629" class="text-green-600 hover:text-green-700 transition-colors">+91 9473243629</a></p>
+            <h3
+              class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-4"
+            >
+              Call Us
+            </h3>
+            <div
+              class="space-y-2 text-sm md:text-base text-gray-600 dark:text-gray-300"
+            >
+              <p>
+                <a
+                  href="tel:+918540982656"
+                  class="text-green-600 hover:text-green-700 transition-colors"
+                  >+91 8540982656</a>
+              </p>
+              <p>
+                <a
+                  href="tel:+919473243629"
+                  class="text-green-600 hover:text-green-700 transition-colors"
+                  >+91 9473243629</a>
+              </p>
             </div>
           </div>
         </div>
 
         <!-- Email -->
-        <div class="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 md:col-span-2 lg:col-span-1">
+        <div
+          class="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 md:col-span-2 lg:col-span-1"
+        >
           <div class="text-center">
-            <div class="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
               <Mail class="text-white" size={28} />
             </div>
-            <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-4">Email Us</h3>
-            <div class="space-y-2 text-sm md:text-base text-gray-600 dark:text-gray-300">
-              <p><a href="mailto:contact@paramountgrove.in" class="text-purple-600 hover:text-purple-700 transition-colors break-all">contact@paramountgrove.in</a></p>
-              <p><a href="mailto:bkpankaj1976@gmail.com" class="text-purple-600 hover:text-purple-700 transition-colors break-all">bkpankaj1976@gmail.com</a></p>
+            <h3
+              class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-4"
+            >
+              Email Us
+            </h3>
+            <div
+              class="space-y-2 text-sm md:text-base text-gray-600 dark:text-gray-300"
+            >
+              <p>
+                <a
+                  href="mailto:contact@paramountgrove.in"
+                  class="text-purple-600 hover:text-purple-700 transition-colors break-all"
+                  >contact@paramountgrove.in</a>
+              </p>
+              <p>
+                <a
+                  href="mailto:bkpankaj1976@gmail.com"
+                  class="text-purple-600 hover:text-purple-700 transition-colors break-all"
+                  >bkpankaj1976@gmail.com</a>
+              </p>
             </div>
           </div>
         </div>
@@ -94,16 +176,28 @@ import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare } from 'lucide-as
   </section>
 
   <!-- Office Hours -->
-  <section class="py-12 md:py-16 bg-gradient-to-br from-gray-50 to-primary-50 dark:from-gray-800 dark:to-primary-900/20">
+  <section
+    class="py-12 md:py-16 bg-gradient-to-br from-gray-50 to-primary-50 dark:from-gray-800 dark:to-primary-900/20"
+  >
     <div class="container-custom px-4">
       <div class="max-w-2xl mx-auto">
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+        <div
+          class="bg-white dark:bg-gray-800 rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200 dark:border-gray-700"
+        >
           <div class="text-center">
-            <div class="w-16 h-16 bg-gradient-to-br from-amber-600 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-amber-600 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
               <Clock class="text-white" size={28} />
             </div>
-            <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-4">Office Hours</h3>
-            <div class="space-y-3 text-sm md:text-base text-gray-600 dark:text-gray-300">
+            <h3
+              class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-4"
+            >
+              Office Hours
+            </h3>
+            <div
+              class="space-y-3 text-sm md:text-base text-gray-600 dark:text-gray-300"
+            >
               <div class="flex justify-between items-center">
                 <span class="font-medium">Monday - Friday:</span>
                 <span>8:00 AM - 01:00 PM</span>
@@ -128,40 +222,55 @@ import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare } from 'lucide-as
     <div class="container-custom px-4">
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-8 md:mb-12">
-          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4">
+          <h2
+            class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4"
+          >
             Send Us a <span class="text-primary-600">Message</span>
           </h2>
-          <p class="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Have a question or want to know more about our school? Fill out the form below and we'll get back to you soon.
+          <p
+            class="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
+          >
+            Have a question or want to know more about our school? Fill out the
+            form below and we'll get back to you soon.
           </p>
         </div>
-        
-        <div class="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+
+        <div
+          class="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200 dark:border-gray-700"
+        >
           <form class="space-y-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div>
-                <label for="firstName" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">First Name *</label>
+                <label
+                  for="firstName"
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  >First Name *</label
+                >
                 <div class="relative">
                   <User class="absolute left-3 top-3 text-gray-400" size={20} />
-                  <input 
-                    type="text" 
-                    id="firstName" 
-                    name="firstName" 
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
                     required
                     class="w-full pl-10 pr-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-colors"
                     placeholder="Enter your first name"
                   />
                 </div>
               </div>
-              
+
               <div>
-                <label for="lastName" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Last Name *</label>
+                <label
+                  for="lastName"
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  >Last Name *</label
+                >
                 <div class="relative">
                   <User class="absolute left-3 top-3 text-gray-400" size={20} />
-                  <input 
-                    type="text" 
-                    id="lastName" 
-                    name="lastName" 
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
                     required
                     class="w-full pl-10 pr-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-colors"
                     placeholder="Enter your last name"
@@ -172,27 +281,38 @@ import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare } from 'lucide-as
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div>
-                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email Address *</label>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  >Email Address *</label
+                >
                 <div class="relative">
                   <Mail class="absolute left-3 top-3 text-gray-400" size={20} />
-                  <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
                     required
                     class="w-full pl-10 pr-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-colors"
                     placeholder="Enter your email address"
                   />
                 </div>
               </div>
-              
+
               <div>
-                <label for="phone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Phone Number</label>
+                <label
+                  for="phone"
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  >Phone Number</label
+                >
                 <div class="relative">
-                  <Phone class="absolute left-3 top-3 text-gray-400" size={20} />
-                  <input 
-                    type="tel" 
-                    id="phone" 
+                  <Phone
+                    class="absolute left-3 top-3 text-gray-400"
+                    size={20}
+                  />
+                  <input
+                    type="tel"
+                    id="phone"
                     name="phone"
                     class="w-full pl-10 pr-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-colors"
                     placeholder="Enter your phone number"
@@ -202,13 +322,20 @@ import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare } from 'lucide-as
             </div>
 
             <div>
-              <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message *</label>
+              <label
+                for="message"
+                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                >Message *</label
+              >
               <div class="relative">
-                <MessageSquare class="absolute left-3 top-3 text-gray-400" size={20} />
-                <textarea 
-                  id="message" 
-                  name="message" 
-                  rows="6" 
+                <MessageSquare
+                  class="absolute left-3 top-3 text-gray-400"
+                  size={20}
+                />
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
                   required
                   class="w-full pl-10 pr-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 resize-none transition-colors"
                   placeholder="Tell us about your inquiry or how we can help you..."
@@ -217,8 +344,8 @@ import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare } from 'lucide-as
             </div>
 
             <div class="text-center">
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 class="inline-flex items-center px-8 py-3 bg-gradient-to-r from-primary-600 to-accent-600 text-white font-semibold rounded-full hover:from-primary-700 hover:to-accent-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 <Send class="mr-2" size={20} />
@@ -232,32 +359,65 @@ import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare } from 'lucide-as
   </section>
 
   <!-- Map Section -->
-  <section class="py-12 md:py-16 bg-gradient-to-br from-gray-50 to-primary-50 dark:from-gray-800 dark:to-primary-900/20">
+  <section
+    class="py-12 md:py-16 bg-gradient-to-br from-gray-50 to-primary-50 dark:from-gray-800 dark:to-primary-900/20"
+  >
     <div class="container-custom px-4">
       <div class="text-center mb-8 md:mb-12">
-        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4">
+        <h2
+          class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4"
+        >
           Find <span class="text-primary-600">Us</span>
         </h2>
-        <p class="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Located in Darbhanga, Laheriasarai, Bihar - easily accessible and well-connected to the city
+        <p
+          class="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
+        >
+          Located in Darbhanga, Laheriasarai, Bihar - easily accessible and
+          well-connected to the city
         </p>
       </div>
-      
+
       <div class="max-w-4xl mx-auto">
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-lg border border-gray-200 dark:border-gray-700">
-          <div class="bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 rounded-lg h-64 md:h-96 flex items-center justify-center">
-            <div class="text-center">
-              <MapPin class="text-primary-600 mx-auto mb-4" size={48} />
-              <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-2">Our Location</h3>
-              <p class="text-sm md:text-base text-gray-600 dark:text-gray-300 mb-4">
-                Paramount Grove Convent School<br>
-                Rs Tank Navtoliya Near RB Memorial Nursing School, Laheriasarai, Darbhanga<br>
-                Bihar, India
-              </p>
-              <a href="https://maps.app.goo.gl/rQNFSiNJVCHrmtPS7" target="_blank" class="inline-flex items-center px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-sm">
-                View on Google Maps
-              </a>
-            </div>
+        <div
+          class="bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-lg border border-gray-200 dark:border-gray-700"
+        >
+          <!-- Embedded Google Map -->
+          <div class="rounded-lg overflow-hidden h-64 md:h-96">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.377035909283!2d85.90809589999999!3d26.1192469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39edb8f37cc981ff%3A0xd306e75e9fea102!2sParamount%20grove%20convent%20school!5e0!3m2!1sen!2sin!4v1751750098945!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Paramount Grove Convent School Location"
+            ></iframe>
+          </div>
+
+          <!-- Map Info -->
+          <div class="text-center mt-4 p-4">
+            <h3
+              class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-2"
+            >
+              Our Location
+            </h3>
+            <p
+              class="text-sm md:text-base text-gray-600 dark:text-gray-300 mb-4"
+            >
+              Paramount Grove Convent School<br />
+              Rs Tank Navtoliya Near RB Memorial Nursing School, Laheriasarai, Darbhanga<br
+              />
+              Bihar, India
+            </p>
+            <a
+              href="https://maps.app.goo.gl/rQNFSiNJVCHrmtPS7"
+              target="_blank"
+              class="inline-flex items-center px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-sm"
+            >
+              <MapPin class="mr-2" size={16} />
+              View on Google Maps
+            </a>
           </div>
         </div>
       </div>
@@ -265,19 +425,32 @@ import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare } from 'lucide-as
   </section>
 
   <!-- Quick Actions -->
-  <section class="py-12 md:py-16 bg-gradient-to-r from-primary-600 to-accent-600">
+  <section
+    class="py-12 md:py-16 bg-gradient-to-r from-primary-600 to-accent-600"
+  >
     <div class="container-custom px-4 text-center">
-      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6">
+      <h2
+        class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6"
+      >
         Ready to Get Started?
       </h2>
-      <p class="text-base md:text-xl text-white/90 mb-6 md:mb-8 max-w-2xl mx-auto">
-        Join our school community and give your child the best education possible.
+      <p
+        class="text-base md:text-xl text-white/90 mb-6 md:mb-8 max-w-2xl mx-auto"
+      >
+        Join our school community and give your child the best education
+        possible.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="/admissions" class="w-full sm:w-auto inline-flex items-center justify-center px-6 md:px-8 py-3 bg-white text-primary-600 font-semibold rounded-full hover:bg-gray-100 transition-colors duration-300">
+        <a
+          href="/admissions"
+          class="w-full sm:w-auto inline-flex items-center justify-center px-6 md:px-8 py-3 bg-white text-primary-600 font-semibold rounded-full hover:bg-gray-100 transition-colors duration-300"
+        >
           Apply for Admission
         </a>
-        <a href="/about" class="w-full sm:w-auto inline-flex items-center justify-center px-6 md:px-8 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-primary-600 transition-colors duration-300">
+        <a
+          href="/about"
+          class="w-full sm:w-auto inline-flex items-center justify-center px-6 md:px-8 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-primary-600 transition-colors duration-300"
+        >
           Learn More About Us
         </a>
       </div>
@@ -289,9 +462,13 @@ import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare } from 'lucide-as
 
 <style>
   .bg-pattern {
-    background-image: radial-gradient(circle at 25% 25%, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+    background-image: radial-gradient(
+      circle at 25% 25%,
+      rgba(99, 102, 241, 0.1) 0%,
+      transparent 50%
+    );
   }
-  
+
   /* Enhanced mobile responsiveness */
   @media (max-width: 640px) {
     .container-custom {
