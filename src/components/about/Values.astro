@@ -1,0 +1,40 @@
+---
+import { Award, Heart, Lightbulb, Users } from 'lucide-astro';
+
+const { values } = Astro.props;
+
+const iconMap = {
+  Award: Award,
+  Heart: Heart,
+  Lightbulb: Lightbulb,
+  Users: Users
+};
+---
+
+<section class="section-padding bg-secondary-900">
+  <div class="container-custom">
+    <div class="text-center mb-12 lg:mb-16">
+      <h2 class="heading-2 mb-4 sm:mb-6">Our Core Values</h2>
+      <p class="text-lead max-w-3xl mx-auto">
+        The fundamental principles that guide our approach to education and shape the character of our students.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+      {values.map((value, index) => {
+        const IconComponent = iconMap[value.icon];
+        return (
+          <div class="text-center card p-6 sm:p-8 hover:glow group">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-primary-500 to-accent-600 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
+              <IconComponent size={32} class="text-white sm:w-10 sm:h-10" />
+            </div>
+            <h4 class="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">{value.title}</h4>
+            <p class="text-sm sm:text-base text-secondary-300 leading-relaxed">
+              {value.description}
+            </p>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>

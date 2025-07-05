@@ -2,202 +2,260 @@
 import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
-import { MapPin, Phone, Mail, Clock, Users, Award, BookOpen, Heart } from 'lucide-astro';
+import DirectorMessage from '../components/about/DirectorMessage.astro';
+import Timeline from '../components/about/Timeline.astro';
+import Values from '../components/about/Values.astro';
+
+// Import data
+import schoolData from '../data/school-info.json';
+import directorData from '../data/director-info.json';
+
+const { school, mission, vision, values, milestones } = schoolData;
+const { director } = directorData;
 ---
 
-<Layout title="About Us - PGCS" description="Learn about Paramount Grove Convent School's rich history, mission, vision, and commitment to excellence in education.">
+<Layout title="About Us - Paramount Grove Convent School" description="Learn about our mission, vision, values, and the dedicated team behind Paramount Grove Convent School's educational excellence.">
   <Navigation />
   
-  <!-- Hero Section -->
-  <section class="section-padding bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden">
-    <div class="absolute inset-0 bg-mesh opacity-30"></div>
-    <div class="container-custom relative z-10">
+  <!-- Enhanced Page Header -->
+  <section class="relative pt-20 md:pt-24 pb-16 md:pb-20 bg-gradient-to-br from-primary-600/20 via-accent-600/20 to-primary-800/20 overflow-hidden">
+    <div class="absolute inset-0 bg-pattern opacity-10"></div>
+    <!-- Floating decorative elements -->
+    <div class="absolute top-10 left-10 w-20 h-20 bg-primary-400/20 rounded-full blur-xl animate-pulse"></div>
+    <div class="absolute bottom-10 right-10 w-32 h-32 bg-accent-400/20 rounded-full blur-xl animate-pulse delay-300"></div>
+    
+    <div class="container-custom relative">
       <div class="text-center">
-        <h1 class="heading-1 mb-6 text-glow">About Our School</h1>
-        <p class="text-lead max-w-4xl mx-auto">
-          For over four decades, Paramount Grove Convent School has been a beacon of excellence in education, 
-          nurturing young minds and shaping future leaders with values, knowledge, and compassion.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Mission & Vision -->
-  <section class="section-padding bg-gray-800">
-    <div class="container-custom">
-      <div class="grid md:grid-cols-2 gap-12">
-        <div class="card p-8">
-          <div class="flex items-center mb-6">
-            <Heart class="text-blue-400 mr-3" size={32} />
-            <h2 class="heading-3">Our Mission</h2>
+        <!-- School Logo/Image - Fixed sizing -->
+        <div class="mb-6 md:mb-8">
+          <div class="w-24 h-24 md:w-32 md:h-32 mx-auto mb-4 relative">
+            <img 
+              src="/images/bg-removed-logo.png" 
+              alt={school.name + " Logo"}
+              class="w-full h-full object-contain drop-shadow-lg"
+              loading="eager"
+            />
           </div>
-          <p class="text-gray-300 leading-relaxed">
-            To provide holistic education that nurtures intellectual, emotional, and spiritual growth in our students. 
-            We strive to create an environment where every child can discover their unique potential and develop 
-            into confident, responsible, and compassionate individuals who contribute positively to society.
-          </p>
         </div>
         
-        <div class="card p-8">
-          <div class="flex items-center mb-6">
-            <Award class="text-green-400 mr-3" size={32} />
-            <h2 class="heading-3">Our Vision</h2>
-          </div>
-          <p class="text-gray-300 leading-relaxed">
-            To be a premier educational institution that inspires lifelong learning, fosters innovation, 
-            and prepares students to excel in an ever-changing global landscape. We envision a school 
-            community where academic excellence meets character development, creating leaders of tomorrow.
-          </p>
+        <h1 class="heading-1 mb-4 md:mb-6 px-4 animate-fade-in">
+          About <span class="text-primary-400">{school.name}</span>
+        </h1>
+        <p class="text-lead max-w-4xl mx-auto px-4 md:px-6 animate-fade-in-delay">
+          {school.description}
+        </p>
+        
+        <!-- Enhanced Tags -->
+        <div class="mt-6 md:mt-8 flex flex-wrap justify-center gap-2 md:gap-4 text-sm px-4">
+          <span class="px-3 md:px-4 py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30 backdrop-blur-sm hover:bg-primary-600/30 transition-colors duration-300">
+            🎓 {school.tagline}
+          </span>
+          <span class="px-3 md:px-4 py-2 bg-accent-600/20 text-accent-300 rounded-full border border-accent-600/30 backdrop-blur-sm hover:bg-accent-600/30 transition-colors duration-300">
+            📅 Founded {school.established}
+          </span>
         </div>
       </div>
     </div>
+    
+    <!-- Smooth transition element -->
+    <div class="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-b from-transparent to-white dark:to-gray-900"></div>
   </section>
 
-  <!-- History -->
-  <section class="section-padding bg-gray-900">
-    <div class="container-custom">
-      <div class="text-center mb-16">
-        <h2 class="heading-2 mb-6">Our Rich History</h2>
-        <p class="text-lead max-w-3xl mx-auto">
-          A journey of excellence spanning over four decades
-        </p>
+  <!-- Enhanced Director Message with better styling -->
+  <section class="relative py-16 md:py-20 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 overflow-hidden">
+    <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-300 to-transparent"></div>
+    
+    <div class="container-custom relative">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          Message from the <span class="text-primary-600">Director</span>
+        </h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-primary-600 to-accent-600 mx-auto rounded-full"></div>
       </div>
       
       <div class="max-w-4xl mx-auto">
-        <div class="relative">
-          <!-- Timeline line -->
-          <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-600 to-green-600 rounded-full"></div>
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 md:p-12 relative border border-gray-200 dark:border-gray-700">
+          <div class="absolute top-6 left-6 text-6xl text-primary-600/20 font-serif">"</div>
+          <div class="absolute bottom-6 right-6 text-6xl text-primary-600/20 font-serif rotate-180">"</div>
           
-          <!-- Timeline items -->
-          <div class="space-y-12">
-            <div class="relative flex items-center">
-              <div class="w-1/2 pr-8 text-right">
-                <div class="card p-6">
-                  <h3 class="text-xl font-semibold mb-2 text-blue-400">1980</h3>
-                  <p class="text-gray-300">Foundation of Paramount Grove Convent School with a vision to provide quality education</p>
-                </div>
-              </div>
-              <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-gray-900"></div>
-              <div class="w-1/2 pl-8"></div>
+          <DirectorMessage director={director} />
+        </div>
+      </div>
+    </div>
+    
+    <!-- Smooth transition -->
+    <div class="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-b from-transparent to-gray-100 dark:to-gray-800"></div>
+  </section>
+  
+  <!-- Enhanced Mission & Vision with better balance -->
+  <section class="relative py-16 md:py-20 bg-gradient-to-br from-gray-100 to-primary-50 dark:from-gray-800 dark:to-primary-900/20">
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent-300 to-transparent"></div>
+    
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          Our <span class="text-primary-600">Mission</span> & <span class="text-accent-600">Vision</span>
+        </h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-primary-600 to-accent-600 mx-auto rounded-full"></div>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+        <!-- Mission Card -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 md:p-10 border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition-shadow duration-300">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
             </div>
-            
-            <div class="relative flex items-center">
-              <div class="w-1/2 pr-8"></div>
-              <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-green-600 rounded-full border-4 border-gray-900"></div>
-              <div class="w-1/2 pl-8">
-                <div class="card p-6">
-                  <h3 class="text-xl font-semibold mb-2 text-green-400">1995</h3>
-                  <p class="text-gray-300">Expansion to include senior secondary education and state-of-the-art facilities</p>
-                </div>
-              </div>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Mission</h3>
+          </div>
+          <div class="text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p class="text-lg leading-relaxed">{mission.content}</p>
+          </div>
+        </div>
+        
+        <!-- Vision Card -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 md:p-10 border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition-shadow duration-300">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-accent-600 rounded-full flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+              </svg>
             </div>
-            
-            <div class="relative flex items-center">
-              <div class="w-1/2 pr-8 text-right">
-                <div class="card p-6">
-                  <h3 class="text-xl font-semibold mb-2 text-blue-400">2010</h3>
-                  <p class="text-gray-300">Introduction of modern teaching methodologies and digital learning platforms</p>
-                </div>
-              </div>
-              <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-gray-900"></div>
-              <div class="w-1/2 pl-8"></div>
-            </div>
-            
-            <div class="relative flex items-center">
-              <div class="w-1/2 pr-8"></div>
-              <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-green-600 rounded-full border-4 border-gray-900"></div>
-              <div class="w-1/2 pl-8">
-                <div class="card p-6">
-                  <h3 class="text-xl font-semibold mb-2 text-green-400">2024</h3>
-                  <p class="text-gray-300">Celebrating 44 years of excellence with over 10,000 successful alumni worldwide</p>
-                </div>
-              </div>
-            </div>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Vision</h3>
+          </div>
+          <div class="text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p class="text-lg leading-relaxed">{vision.content}</p>
           </div>
         </div>
       </div>
     </div>
+    
+    <!-- Smooth transition -->
+    <div class="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-b from-transparent to-white dark:to-gray-900"></div>
   </section>
-
-  <!-- Core Values -->
-  <section class="section-padding bg-gray-800">
+  
+  <!-- Enhanced Core Values -->
+  <section class="relative py-16 md:py-20 bg-white dark:bg-gray-900">
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-300 to-transparent"></div>
+    
     <div class="container-custom">
-      <div class="text-center mb-16">
-        <h2 class="heading-2 mb-6">Our Core Values</h2>
-        <p class="text-lead max-w-3xl mx-auto">
-          The principles that guide our educational philosophy and daily practices
-        </p>
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          Our Core <span class="text-primary-600">Values</span>
+        </h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-primary-600 to-accent-600 mx-auto rounded-full"></div>
       </div>
       
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="card p-6 text-center">
-          <BookOpen class="text-blue-400 mx-auto mb-4" size={48} />
-          <h3 class="text-xl font-semibold mb-3">Excellence</h3>
-          <p class="text-gray-300 text-sm">
-            Striving for the highest standards in education, character, and achievement
-          </p>
-        </div>
-        
-        <div class="card p-6 text-center">
-          <Heart class="text-green-400 mx-auto mb-4" size={48} />
-          <h3 class="text-xl font-semibold mb-3">Compassion</h3>
-          <p class="text-gray-300 text-sm">
-            Fostering empathy, kindness, and understanding in all our interactions
-          </p>
-        </div>
-        
-        <div class="card p-6 text-center">
-          <Users class="text-purple-400 mx-auto mb-4" size={48} />
-          <h3 class="text-xl font-semibold mb-3">Integrity</h3>
-          <p class="text-gray-300 text-sm">
-            Upholding honesty, ethics, and moral principles in all aspects of life
-          </p>
-        </div>
-        
-        <div class="card p-6 text-center">
-          <Award class="text-yellow-400 mx-auto mb-4" size={48} />
-          <h3 class="text-xl font-semibold mb-3">Innovation</h3>
-          <p class="text-gray-300 text-sm">
-            Embracing creativity, critical thinking, and progressive teaching methods
-          </p>
-        </div>
-      </div>
+      <Values values={values} />
     </div>
+    
+    <!-- Smooth transition -->
+    <div class="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-b from-transparent to-primary-50 dark:to-primary-900/20"></div>
   </section>
-
-  <!-- Statistics -->
-  <section class="section-padding bg-gray-900">
+  
+  <!-- Enhanced Timeline -->
+  <section class="relative py-16 md:py-20 bg-gradient-to-br from-primary-50 to-accent-50 dark:from-primary-900/20 dark:to-accent-900/20">
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent-300 to-transparent"></div>
+    
     <div class="container-custom">
-      <div class="text-center mb-16">
-        <h2 class="heading-2 mb-6">Our Achievements</h2>
-        <p class="text-lead max-w-3xl mx-auto">
-          Numbers that reflect our commitment to excellence
-        </p>
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          Our <span class="text-accent-600">Journey</span>
+        </h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-primary-600 to-accent-600 mx-auto rounded-full"></div>
       </div>
       
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="text-center">
-          <div class="text-4xl font-bold text-blue-400 mb-2">44+</div>
-          <div class="text-gray-300">Years of Excellence</div>
-        </div>
-        
-        <div class="text-center">
-          <div class="text-4xl font-bold text-green-400 mb-2">10,000+</div>
-          <div class="text-gray-300">Alumni Worldwide</div>
-        </div>
-        
-        <div class="text-center">
-          <div class="text-4xl font-bold text-purple-400 mb-2">98%</div>
-          <div class="text-gray-300">Success Rate</div>
-        </div>
-        
-        <div class="text-center">
-          <div class="text-4xl font-bold text-yellow-400 mb-2">150+</div>
-          <div class="text-gray-300">Awards Won</div>
-        </div>
-      </div>
+      <Timeline milestones={milestones} />
     </div>
   </section>
-
+  
   <Footer />
 </Layout>
+
+<style>
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fade-in-delay {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out;
+  }
+  
+  .animate-fade-in-delay {
+    animation: fade-in-delay 0.8s ease-out 0.3s both;
+  }
+  
+  /* Responsive improvements */
+  @media (max-width: 768px) {
+    .heading-1 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+    }
+    
+    .text-lead {
+      font-size: 1.125rem;
+      line-height: 1.6;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .heading-1 {
+      font-size: 2rem;
+    }
+    
+    .text-lead {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Background patterns */
+  .bg-grid-pattern {
+    background-image: radial-gradient(circle at 25% 25%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+                      radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  }
+  
+  /* Smooth section transitions */
+  section {
+    position: relative;
+  }
+  
+  /* Card hover effects */
+  .hover\\:shadow-2xl:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Enhanced responsive design */
+  @media (max-width: 768px) {
+    .grid.md\\:grid-cols-2 {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    section {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+  }
+</style>

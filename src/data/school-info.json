@@ -1,0 +1,70 @@
+{
+  "school": {
+    "name": "Paramount Grove Convent School",
+    "established": 2017,
+    "tagline": "Excellence in Education Since 2017",
+    "description": "Paramount Grove Convent School is committed to providing quality education that nurtures young minds and develops responsible citizens for tomorrow's world."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "content": "To provide holistic education that nurtures every child’s academic, social, and emotional development, fostering lifelong learning and responsible citizenship. We are dedicated to creating a learning program that engages every single student, empowering them to overcome challenges and exceed their goals in a caring and supportive environment. We also believe in community engagement and strive to create meaningful connections with our local community to enrich the educational experience"
+  },
+  "vision": {
+    "title": "Our Vision", 
+    "content": "To be a leading educational institution that inspires excellence, fosters innovation, and prepares students to become global citizens who contribute positively to society through their knowledge, character, and leadership.We aim to foster academic excellence while focusing on holistic development through personalized attention, smaller class sizes, and a supportive atmosphere. We envision a future where our students grow into compassionate, confident individuals with strong values, critical thinking skills, and a lifelong love for learning. By incorporating practices like yoga and mindfulness, we strive to promote not just intellectual growth but also emotional and physical well-being, preparing students to lead meaningful and fulfilling lives in an ever-evolving world."
+  },
+  "values": [
+    {
+      "title": "Excellence",
+      "description": "Striving for the highest standards in academic achievement and character development",
+      "icon": "Award"
+    },
+    {
+      "title": "Integrity",
+      "description": "Upholding honesty, ethics, and moral principles in all our endeavors",
+      "icon": "Heart"
+    },
+    {
+      "title": "Innovation",
+      "description": "Embracing modern teaching methods and technology to enhance learning",
+      "icon": "Lightbulb"
+    },
+    {
+      "title": "Community",
+      "description": "Building strong relationships and fostering collaboration among all stakeholders",
+      "icon": "Users"
+    }
+  ],
+  "milestones": [
+    {
+      "year": "2017",
+      "title": "Foundation",
+      "description": "Established Paramount Grove Convent School with a vision to provide quality education in Bihar",
+      "color": "blue"
+    },
+    {
+      "year": "2018",
+      "title": "First Graduates",
+      "description": "Our first batch of students successfully completed their primary education",
+      "color": "green"
+    },
+    {
+      "year": "2020",
+      "title": "Digital Learning",
+      "description": "Successfully adapted to online learning during pandemic and introduced hybrid education model",
+      "color": "purple"
+    },
+    {
+      "year": "2023",
+      "title": "Expansion",
+      "description": "Opened second branch and enhanced facilities to serve more students",
+      "color": "yellow"
+    },
+    {
+      "year": "2025",
+      "title": "Present Day",
+      "description": "Celebrating 8 years of educational excellence with growing student community",
+      "color": "cyan"
+    }
+  ]
+}
