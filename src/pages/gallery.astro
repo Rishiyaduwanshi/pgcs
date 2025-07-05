@@ -1,0 +1,112 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import GalleryGrid from '../components/gallery/GalleryGrid.astro';
+import GalleryCategories from '../components/gallery/GalleryCategories.astro';
+
+// Import gallery data
+import galleryData from '../data/gallery.json';
+
+// Categorize images for better organization
+const categories = {
+  all: galleryData,
+  academics: galleryData.filter(img => 
+    img.alt.includes('drawing') || img.alt.includes('Science') || img.alt.includes('assembly')
+  ),
+  sports: galleryData.filter(img => 
+    img.alt.includes('physical training') || img.alt.includes('yoga') || img.alt.includes('PT')
+  ),
+  events: galleryData.filter(img => 
+    img.alt.includes('dance') || img.alt.includes('ceremony') || img.alt.includes('celebration') || img.alt.includes('competition')
+  ),
+  activities: galleryData.filter(img => 
+    img.alt.includes('plantation') || img.alt.includes('children') || img.alt.includes('school')
+  )
+};
+
+const totalImages = galleryData.length;
+---
+
+<Layout 
+  title="Gallery - Paramount Grove Convent School" 
+  description="Explore our vibrant school life through our photo gallery. See students engaged in academics, sports, cultural events, and various activities at Paramount Grove Convent School."
+>
+  <Navigation />
+  
+  <!-- Gallery Header -->
+  <section class="relative pt-24 pb-16 bg-gradient-to-br from-primary-600/10 via-accent-600/10 to-primary-800/10 overflow-hidden">
+    <div class="absolute inset-0 bg-pattern opacity-5"></div>
+    
+    <!-- Floating elements -->
+    <div class="absolute top-20 left-10 w-16 h-16 bg-primary-400/20 rounded-full blur-lg animate-pulse"></div>
+    <div class="absolute bottom-20 right-10 w-24 h-24 bg-accent-400/20 rounded-full blur-lg animate-pulse delay-500"></div>
+    
+    <div class="container-custom relative">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+          School <span class="text-primary-600">Gallery</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
+          Capturing memorable moments of our students' journey through academics, sports, and cultural activities
+        </p>
+        
+        <!-- Gallery Stats -->
+        <div class="flex flex-wrap justify-center gap-4 md:gap-8 text-sm md:text-base">
+          <div class="flex items-center gap-2 px-4 py-2 bg-white/80 dark:bg-gray-800/80 rounded-full backdrop-blur-sm">
+            <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            <span class="font-semibold">{totalImages}+ Photos</span>
+          </div>
+          
+          <div class="flex items-center gap-2 px-4 py-2 bg-white/80 dark:bg-gray-800/80 rounded-full backdrop-blur-sm">
+            <svg class="w-5 h-5 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+            </svg>
+            <span class="font-semibold">Multiple Categories</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Categories Filter -->
+  <GalleryCategories />
+
+  <!-- Gallery Grid -->
+  <section class="py-16 bg-gray-50 dark:bg-gray-900">
+    <div class="container-custom">
+      <GalleryGrid images={galleryData} />
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 bg-gradient-to-r from-primary-600 to-accent-600">
+    <div class="container-custom text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Join Our School Community
+      </h2>
+      <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+        Be part of these amazing moments and create lasting memories with us
+      </p>
+      <a 
+        href="/admissions" 
+        class="inline-flex items-center px-8 py-3 bg-white text-primary-600 font-semibold rounded-full hover:bg-gray-100 transition-colors duration-300"
+      >
+        Apply for Admission
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  .bg-pattern {
+    background-image: radial-gradient(circle at 25% 25%, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+  }
+</style>

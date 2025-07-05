@@ -1,0 +1,115 @@
+<section
+  class="py-8 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700"
+>
+  <div class="container-custom rounded-md">
+    <div class="flex flex-wrap justify-center gap-2 md:gap-4">
+      <button
+        class="filter-btn active px-4 md:px-6 py-2 md:py-3 rounded-full font-medium transition-all duration-300 hover:scale-105"
+        data-filter="all"
+      >
+        All Photos
+      </button>
+      <button
+        class="filter-btn px-4 md:px-6 py-2 md:py-3 rounded-full font-medium transition-all duration-300 hover:scale-105"
+        data-filter="academics"
+      >
+        📚 Academics
+      </button>
+      <button
+        class="filter-btn px-4 md:px-6 py-2 md:py-3 rounded-full font-medium transition-all duration-300 hover:scale-105"
+        data-filter="sports"
+      >
+        🏃‍♂️ Sports
+      </button>
+      <button
+        class="filter-btn px-4 md:px-6 py-2 md:py-3 rounded-full font-medium transition-all duration-300 hover:scale-105"
+        data-filter="events"
+      >
+        🎭 Events
+      </button>
+      <button
+        class="filter-btn px-4 md:px-6 py-2 md:py-3 rounded-full font-medium transition-all duration-300 hover:scale-105"
+        data-filter="activities"
+      >
+        🌱 Activities
+      </button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .filter-btn {
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    color: #374151;
+    border: 2px solid transparent;
+  }
+
+  .filter-btn:hover {
+    background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+    transform: translateY(-2px);
+  }
+
+  .filter-btn.active {
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    color: white;
+    border-color: #3b82f6;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  }
+
+  .dark .filter-btn {
+    background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+    color: #f3f4f6;
+  }
+
+  .dark .filter-btn:hover {
+    background: linear-gradient(135deg, #4b5563 0%, #6b7280 100%);
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const galleryItems = document.querySelectorAll(".gallery-item");
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = (button as HTMLButtonElement).dataset.filter;
+
+        // Update active button
+        filterButtons.forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        // Filter gallery items
+        galleryItems.forEach((item) => {
+          const shouldShow =
+            filter === "all" ||
+            item.dataset.category === filter ||
+            (filter === "academics" &&
+              (item.querySelector("img").alt.includes("drawing") ||
+                item.querySelector("img").alt.includes("Science") ||
+                item.querySelector("img").alt.includes("assembly"))) ||
+            (filter === "sports" &&
+              (item.querySelector("img").alt.includes("physical training") ||
+                item.querySelector("img").alt.includes("yoga") ||
+                item.querySelector("img").alt.includes("PT"))) ||
+            (filter === "events" &&
+              (item.querySelector("img").alt.includes("dance") ||
+                item.querySelector("img").alt.includes("ceremony") ||
+                item.querySelector("img").alt.includes("celebration") ||
+                item.querySelector("img").alt.includes("competition"))) ||
+            (filter === "activities" &&
+              (item.querySelector("img").alt.includes("plantation") ||
+                item.querySelector("img").alt.includes("children") ||
+                item.querySelector("img").alt.includes("school")));
+
+          if (shouldShow) {
+            item.classList.remove("hidden");
+            item.style.animation = "fadeIn 0.5s ease-in-out";
+          } else {
+            item.classList.add("hidden");
+          }
+        });
+      });
+    });
+  });
+</script>
