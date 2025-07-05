@@ -1,0 +1,84 @@
+{
+  "admissionInfo": {
+    "currentYear": 2025,
+    "nextAcademicYear": "2025-26",
+    "entranceTest": {
+      "prospectusPrice": 500,
+      "currency": "INR",
+      "benefits": [
+        "Free dress for top performers",
+        "Free admission for exceptional students",
+        "Free registration for selected candidates",
+        "Special scholarships for meritorious students"
+      ],
+      "testCriteria": "Criteria varies each year based on performance and merit",
+      "contactInfo": {
+        "phone": ["+91 8540982656", "+91 9473243629"],
+        "email": "contact@paramountgrove.in"
+      }
+    },
+    "process": [
+      {
+        "step": 1,
+        "title": "Purchase Prospectus",
+        "description": "Buy the admission prospectus form from school office for ₹500",
+        "icon": "FileText",
+        "details": "Visit school office during working hours to purchase the prospectus form"
+      },
+      {
+        "step": 2,
+        "title": "Fill Application",
+        "description": "Complete the application form with all required details",
+        "icon": "Edit",
+        "details": "Fill all sections carefully and attach required documents"
+      },
+      {
+        "step": 3,
+        "title": "Entrance Test",
+        "description": "Appear for entrance test based on current class level",
+        "icon": "BookOpen",
+        "details": "Test will be conducted for the class student is currently studying"
+      },
+      {
+        "step": 4,
+        "title": "Result & Registration",
+        "description": "Check results and complete registration if qualified",
+        "icon": "CheckCircle",
+        "details": "Successful candidates proceed to next class admission"
+      }
+    ],
+    "requirements": {
+      "documents": [
+        "Birth Certificate (Original + Photocopy)",
+        "Previous School Transfer Certificate",
+        "Mark sheets of last attended class",
+        "Passport size photographs (Student & Parents)",
+        "Aadhar Card copies (Student & Parents)",
+        "Address proof (Utility bill/Rental agreement)",
+        "Caste Certificate (if applicable)",
+        "Income Certificate (if applicable)"
+      ],
+      "ageRequirements": [
+        { "class": "Pre-Primary", "age": "2-4 years" },
+        { "class": "Class 1", "age": "4-6 years" },
+        { "class": "Class 2-5", "age": "As per class standard" },
+        { "class": "Class 6-8", "age": "As per class standard" },
+        { "class": "Class 9-12", "age": "As per class standard" }
+      ]
+    },
+    "importantNotes": [
+      "Entrance test is mandatory for all classes except Pre-Primary",
+      "Test will be conducted for current class level, not desired class",
+      "Admission to next class depends on entrance test performance",
+      "All processes are conducted offline at school premises",
+      "Prospectus must be purchased before entrance test",
+      "Benefits and criteria may vary each academic year"
+    ],
+    "fees": {
+      "prospectus": 500,
+      "registration": "As per school policy",
+      "admission": "Based on entrance test performance",
+      "note": "Fee structure varies based on class and performance in entrance test"
+    }
+  }
+}
