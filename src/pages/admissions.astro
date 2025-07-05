@@ -18,6 +18,9 @@ const currentMonth = currentDate.getMonth() + 1; // JavaScript months are 0-inde
 const isAdmissionPeriod = currentMonth >= 11;
 const admissionYear = isAdmissionPeriod ? currentYear + 1 : currentYear;
 const academicYear = isAdmissionPeriod ? `${currentYear + 1}-${(currentYear + 2).toString().slice(-2)}` : `${currentYear}-${(currentYear + 1).toString().slice(-2)}`;
+
+// Dynamic prospectus price (can be updated easily)
+const prospectusPrice = 500; // Current price, can be increased as needed
 ---
 
 <Layout 
@@ -27,50 +30,50 @@ const academicYear = isAdmissionPeriod ? `${currentYear + 1}-${(currentYear + 2)
   <Navigation />
   
   <!-- Hero Section -->
-  <section class="relative pt-24 pb-16 bg-gradient-to-br from-primary-600/20 via-accent-600/20 to-primary-800/20 overflow-hidden">
+  <section class="relative pt-20 md:pt-24 pb-12 md:pb-16 bg-gradient-to-br from-primary-600/20 via-accent-600/20 to-primary-800/20 overflow-hidden">
     <div class="absolute inset-0 bg-pattern opacity-10"></div>
     
     <!-- Floating decorative elements -->
-    <div class="absolute top-20 left-10 w-16 h-16 bg-primary-400/20 rounded-full blur-lg animate-pulse"></div>
-    <div class="absolute bottom-20 right-10 w-24 h-24 bg-accent-400/20 rounded-full blur-lg animate-pulse delay-500"></div>
+    <div class="absolute top-10 md:top-20 left-5 md:left-10 w-12 h-12 md:w-16 md:h-16 bg-primary-400/20 rounded-full blur-lg animate-pulse"></div>
+    <div class="absolute bottom-10 md:bottom-20 right-5 md:right-10 w-16 h-16 md:w-24 md:h-24 bg-accent-400/20 rounded-full blur-lg animate-pulse delay-500"></div>
     
     <div class="container-custom relative">
-      <div class="text-center">
-        <div class="inline-flex items-center px-4 py-2 bg-primary-600/20 text-primary-400 rounded-full border border-primary-600/30 backdrop-blur-sm mb-6">
-          <AlertCircle size={20} class="mr-2" />
-          <span class="font-semibold">Admissions Open for {academicYear}</span>
+      <div class="text-center px-4">
+        <div class="inline-flex items-center px-3 md:px-4 py-2 bg-primary-600/20 text-primary-400 rounded-full border border-primary-600/30 backdrop-blur-sm mb-4 md:mb-6">
+          <AlertCircle size={16} class="mr-2" />
+          <span class="font-semibold text-sm md:text-base">Admissions Open for {academicYear}</span>
         </div>
         
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6">
           Join Our School <span class="text-primary-600">Community</span>
         </h1>
-        <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
+        <p class="text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-6 md:mb-8">
           Begin your child's journey to academic excellence through our comprehensive entrance test process
         </p>
         
-        <!-- Key Highlights -->
-        <div class="grid md:grid-cols-3 gap-4 md:gap-6 mt-8 max-w-4xl mx-auto">
-          <div class="flex items-center gap-3 px-4 py-3 bg-white/80 dark:bg-gray-800/80 rounded-xl backdrop-blur-sm">
-            <Trophy class="text-primary-600" size={24} />
+        <!-- Key Highlights - Improved mobile layout -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6 mt-6 md:mt-8 max-w-4xl mx-auto">
+          <div class="flex items-center gap-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 rounded-xl backdrop-blur-sm shadow-sm">
+            <Trophy class="text-primary-600 flex-shrink-0" size={20} />
             <div class="text-left">
               <p class="font-semibold text-sm">Merit-Based Benefits</p>
               <p class="text-xs text-gray-600 dark:text-gray-400">Free dress, admission & more</p>
             </div>
           </div>
           
-          <div class="flex items-center gap-3 px-4 py-3 bg-white/80 dark:bg-gray-800/80 rounded-xl backdrop-blur-sm">
-            <BookOpen class="text-accent-600" size={24} />
+          <div class="flex items-center gap-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 rounded-xl backdrop-blur-sm shadow-sm">
+            <BookOpen class="text-accent-600 flex-shrink-0" size={20} />
             <div class="text-left">
               <p class="font-semibold text-sm">Entrance Test</p>
               <p class="text-xs text-gray-600 dark:text-gray-400">Class-based evaluation</p>
             </div>
           </div>
           
-          <div class="flex items-center gap-3 px-4 py-3 bg-white/80 dark:bg-gray-800/80 rounded-xl backdrop-blur-sm">
-            <IndianRupee class="text-green-600" size={24} />
+          <div class="flex items-center gap-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 rounded-xl backdrop-blur-sm shadow-sm">
+            <IndianRupee class="text-green-600 flex-shrink-0" size={20} />
             <div class="text-left">
               <p class="font-semibold text-sm">Prospectus</p>
-              <p class="text-xs text-gray-600 dark:text-gray-400">₹{admissionInfo.entranceTest.prospectusPrice} only</p>
+              <p class="text-xs text-gray-600 dark:text-gray-400">₹{prospectusPrice} only</p>
             </div>
           </div>
         </div>
@@ -79,28 +82,28 @@ const academicYear = isAdmissionPeriod ? `${currentYear + 1}-${(currentYear + 2)
   </section>
 
   <!-- Entrance Test Information -->
-  <section class="py-16 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
-    <div class="container-custom">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+  <section class="py-12 md:py-16 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
+    <div class="container-custom px-4">
+      <div class="text-center mb-8 md:mb-12">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4">
           Entrance Test <span class="text-primary-600">Process</span>
         </h2>
-        <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+        <p class="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
           Our entrance test ensures students are placed in appropriate classes based on their current knowledge level
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
         <!-- Test Information -->
-        <div class="space-y-6">
-          <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+        <div class="space-y-4 md:space-y-6">
+          <div class="bg-white dark:bg-gray-800 rounded-2xl p-5 md:p-6 shadow-lg border border-gray-200 dark:border-gray-700">
             <div class="flex items-center mb-4">
-              <div class="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center mr-4">
-                <BookOpen class="text-white" size={24} />
+              <div class="w-10 h-10 md:w-12 md:h-12 bg-primary-600 rounded-full flex items-center justify-center mr-3 md:mr-4">
+                <BookOpen class="text-white" size={20} />
               </div>
-              <h3 class="text-xl font-bold text-gray-900 dark:text-white">How It Works</h3>
+              <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white">How It Works</h3>
             </div>
-            <ul class="space-y-3 text-gray-600 dark:text-gray-300">
+            <ul class="space-y-2 md:space-y-3 text-sm md:text-base text-gray-600 dark:text-gray-300">
               <li class="flex items-start">
                 <span class="w-2 h-2 bg-primary-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                 Student wants admission in Class 8 → Takes Class 7 entrance test
@@ -120,52 +123,52 @@ const academicYear = isAdmissionPeriod ? `${currentYear + 1}-${(currentYear + 2)
             </ul>
           </div>
 
-          <div class="bg-gradient-to-r from-accent-600 to-primary-600 rounded-2xl p-6 text-white">
+          <div class="bg-gradient-to-r from-accent-600 to-primary-600 rounded-2xl p-5 md:p-6 text-white">
             <div class="flex items-center mb-4">
-              <Gift class="mr-3" size={28} />
-              <h3 class="text-xl font-bold">Special Benefits</h3>
+              <Gift class="mr-3" size={24} />
+              <h3 class="text-lg md:text-xl font-bold">Special Benefits</h3>
             </div>
-            <div class="grid md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
               {admissionInfo.entranceTest.benefits.map((benefit, index) => (
                 <div class="flex items-center">
-                  <Star class="text-yellow-300 mr-2" size={16} />
+                  <Star class="text-yellow-300 mr-2 flex-shrink-0" size={14} />
                   <span class="text-sm">{benefit}</span>
                 </div>
               ))}
             </div>
-            <p class="text-sm text-white/80 mt-4">
+            <p class="text-xs md:text-sm text-white/80 mt-3 md:mt-4">
               *Benefits vary each year based on entrance test performance and school policies
             </p>
           </div>
         </div>
 
         <!-- Contact Information -->
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+          <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6">
             Get Entrance Test Details
           </h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-6">
+          <p class="text-sm md:text-base text-gray-600 dark:text-gray-300 mb-4 md:mb-6">
             For specific entrance test criteria, syllabus, and current year benefits, contact our admissions office:
           </p>
           
           <div class="space-y-4">
-            <div class="flex items-center">
-              <Phone class="text-primary-600 mr-3" size={20} />
+            <div class="flex items-start">
+              <Phone class="text-primary-600 mr-3 mt-1 flex-shrink-0" size={18} />
               <div>
-                <p class="font-semibold text-gray-900 dark:text-white">Phone Numbers</p>
-                <div class="text-sm text-gray-600 dark:text-gray-300">
+                <p class="font-semibold text-gray-900 dark:text-white text-sm md:text-base">Phone Numbers</p>
+                <div class="text-sm text-gray-600 dark:text-gray-300 flex flex-wrap gap-2">
                   {admissionInfo.entranceTest.contactInfo.phone.map((phone, index) => (
-                    <a href={`tel:${phone}`} class="hover:text-primary-600 mr-4">{phone}</a>
+                    <a href={`tel:${phone}`} class="hover:text-primary-600 transition-colors">{phone}</a>
                   ))}
                 </div>
               </div>
             </div>
             
-            <div class="flex items-center">
-              <Mail class="text-primary-600 mr-3" size={20} />
+            <div class="flex items-start">
+              <Mail class="text-primary-600 mr-3 mt-1 flex-shrink-0" size={18} />
               <div>
-                <p class="font-semibold text-gray-900 dark:text-white">Email</p>
-                <a href={`mailto:${admissionInfo.entranceTest.contactInfo.email}`} class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary-600">
+                <p class="font-semibold text-gray-900 dark:text-white text-sm md:text-base">Email</p>
+                <a href={`mailto:${admissionInfo.entranceTest.contactInfo.email}`} class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary-600 transition-colors break-all">
                   {admissionInfo.entranceTest.contactInfo.email}
                 </a>
               </div>
@@ -177,24 +180,24 @@ const academicYear = isAdmissionPeriod ? `${currentYear + 1}-${(currentYear + 2)
   </section>
 
   <!-- Admission Process -->
-  <section class="py-16 bg-white dark:bg-gray-900">
-    <div class="container-custom">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+  <section class="py-12 md:py-16 bg-white dark:bg-gray-900">
+    <div class="container-custom px-4">
+      <div class="text-center mb-8 md:mb-12">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4">
           Admission <span class="text-primary-600">Process</span>
         </h2>
-        <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+        <p class="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
           Follow these simple steps to secure your child's admission at PGCS
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
         {admissionInfo.process.map((step, index) => (
-          <div class="relative bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
-            <div class="w-16 h-16 bg-gradient-to-br from-primary-600 to-accent-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-white font-bold text-lg">{step.step}</span>
+          <div class="relative bg-gray-50 dark:bg-gray-800 rounded-2xl p-5 md:p-6 text-center hover:shadow-lg transition-shadow duration-300">
+            <div class="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-primary-600 to-accent-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-white font-bold text-base md:text-lg">{step.step}</span>
             </div>
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+            <h3 class="text-base md:text-lg font-semibold text-gray-900 dark:text-white mb-2">
               {step.title}
             </h3>
             <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">
@@ -216,19 +219,19 @@ const academicYear = isAdmissionPeriod ? `${currentYear + 1}-${(currentYear + 2)
   </section>
 
   <!-- Requirements -->
-  <section class="py-16 bg-gradient-to-br from-gray-50 to-primary-50 dark:from-gray-800 dark:to-primary-900/20">
-    <div class="container-custom">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+  <section class="py-12 md:py-16 bg-gradient-to-br from-gray-50 to-primary-50 dark:from-gray-800 dark:to-primary-900/20">
+    <div class="container-custom px-4">
+      <div class="text-center mb-8 md:mb-12">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4">
           Requirements & <span class="text-primary-600">Documents</span>
         </h2>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-12">
+      <div class="grid lg:grid-cols-2 gap-8 md:gap-12">
         <!-- Required Documents -->
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
-            <FileText class="text-primary-600 mr-3" size={24} />
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+          <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6 flex items-center">
+            <FileText class="text-primary-600 mr-3" size={20} />
             Required Documents
           </h3>
           <div class="space-y-3">
@@ -242,16 +245,16 @@ const academicYear = isAdmissionPeriod ? `${currentYear + 1}-${(currentYear + 2)
         </div>
 
         <!-- Age Requirements -->
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
-            <Users class="text-primary-600 mr-3" size={24} />
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+          <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6 flex items-center">
+            <Users class="text-primary-600 mr-3" size={20} />
             Age Requirements
           </h3>
-          <div class="space-y-4">
+          <div class="space-y-3 md:space-y-4">
             {admissionInfo.requirements.ageRequirements.map((req, index) => (
               <div class="flex justify-between items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                <span class="font-medium text-gray-900 dark:text-white">{req.class}</span>
-                <span class="text-primary-600 font-semibold">{req.age}</span>
+                <span class="font-medium text-gray-900 dark:text-white text-sm md:text-base">{req.class}</span>
+                <span class="text-primary-600 font-semibold text-sm md:text-base">{req.age}</span>
               </div>
             ))}
           </div>
@@ -261,14 +264,14 @@ const academicYear = isAdmissionPeriod ? `${currentYear + 1}-${(currentYear + 2)
   </section>
 
   <!-- Important Notes -->
-  <section class="py-16 bg-white dark:bg-gray-900">
-    <div class="container-custom">
-      <div class="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 rounded-2xl p-8 border border-amber-200 dark:border-amber-800">
-        <div class="flex items-center mb-6">
-          <AlertCircle class="text-amber-600 mr-3" size={28} />
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white">Important Notes</h3>
+  <section class="py-12 md:py-16 bg-white dark:bg-gray-900">
+    <div class="container-custom px-4">
+      <div class="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 rounded-2xl p-6 md:p-8 border border-amber-200 dark:border-amber-800">
+        <div class="flex items-center mb-4 md:mb-6">
+          <AlertCircle class="text-amber-600 mr-3" size={24} />
+          <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white">Important Notes</h3>
         </div>
-        <div class="grid md:grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
           {admissionInfo.importantNotes.map((note, index) => (
             <div class="flex items-start">
               <span class="w-2 h-2 bg-amber-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
@@ -280,23 +283,23 @@ const academicYear = isAdmissionPeriod ? `${currentYear + 1}-${(currentYear + 2)
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="py-16 bg-gradient-to-r from-primary-600 to-accent-600">
-    <div class="container-custom text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+  <!-- Enhanced CTA Section -->
+  <section class="py-12 md:py-16 bg-gradient-to-r from-primary-600 to-accent-600">
+    <div class="container-custom px-4 text-center">
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6">
         Ready to Start Your Journey?
       </h2>
-      <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+      <p class="text-base md:text-xl text-white/90 mb-6 md:mb-8 max-w-2xl mx-auto">
         Visit our school office to purchase the prospectus and begin your admission process today.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/contact" class="inline-flex items-center px-8 py-3 bg-white text-primary-600 font-semibold rounded-full hover:bg-gray-100 transition-colors duration-300">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="/contact" class="w-full sm:w-auto inline-flex items-center justify-center px-6 md:px-8 py-3 bg-white text-primary-600 font-semibold rounded-full hover:bg-gray-100 transition-colors duration-300">
+          <Clock class="mr-2" size={18} />
           Visit School Office
-          <Clock class="ml-2" size={20} />
         </a>
-        <a href="/gallery" class="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-primary-600 transition-colors duration-300">
+        <a href="/gallery" class="w-full sm:w-auto inline-flex items-center justify-center px-6 md:px-8 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-primary-600 transition-colors duration-300">
+          <Users class="mr-2" size={18} />
           View School Gallery
-          <Users class="ml-2" size={20} />
         </a>
       </div>
     </div>
@@ -308,5 +311,13 @@ const academicYear = isAdmissionPeriod ? `${currentYear + 1}-${(currentYear + 2)
 <style>
   .bg-pattern {
     background-image: radial-gradient(circle at 25% 25%, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+  }
+  
+  /* Enhanced mobile responsiveness */
+  @media (max-width: 640px) {
+    .container-custom {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
   }
 </style>
