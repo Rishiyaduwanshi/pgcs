@@ -1,0 +1,272 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import { BookOpen, Users, Monitor, Microscope, Palette, Music, Trophy, Heart, Wifi, Camera, Shield, Bus } from 'lucide-astro';
+---
+
+<Layout title="Facilities - PGCS" description="Explore the world-class facilities at Paramount Grove Convent School including modern classrooms, laboratories, sports facilities, and more.">
+  <Navigation />
+  
+  <!-- Hero Section -->
+  <section class="section-padding bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden">
+    <div class="absolute inset-0 bg-mesh opacity-30"></div>
+    <div class="container-custom relative z-10">
+      <div class="text-center">
+        <h1 class="heading-1 mb-6 text-glow">World-Class Facilities</h1>
+        <p class="text-lead max-w-4xl mx-auto">
+          Our state-of-the-art infrastructure and modern facilities create an ideal learning environment 
+          that nurtures creativity, innovation, and excellence in every student.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facility Categories -->
+  <section class="section-padding bg-gray-800">
+    <div class="container-custom">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Academic Facilities -->
+        <div class="card p-8">
+          <BookOpen class="text-blue-400 mb-6" size={48} />
+          <h3 class="text-2xl font-semibold mb-4">Learning Spaces</h3>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+              Smart Classrooms with Interactive Boards
+            </li>
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+              Well-Ventilated & Air-Conditioned Rooms
+            </li>
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+              Modern Furniture & Ergonomic Design
+            </li>
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+              Audio-Visual Learning Equipment
+            </li>
+          </ul>
+        </div>
+
+        <!-- Science Labs -->
+        <div class="card p-8">
+          <Microscope class="text-green-400 mb-6" size={48} />
+          <h3 class="text-2xl font-semibold mb-4">Science Laboratories</h3>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+              Physics Laboratory with Modern Equipment
+            </li>
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+              Chemistry Lab with Safety Features
+            </li>
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+              Biology Lab with Microscopes
+            </li>
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+              Mathematics Lab for Practical Learning
+            </li>
+          </ul>
+        </div>
+
+        <!-- Computer Lab -->
+        <div class="card p-8">
+          <Monitor class="text-purple-400 mb-6" size={48} />
+          <h3 class="text-2xl font-semibold mb-4">Computer Center</h3>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+              50+ Latest Computers & Laptops
+            </li>
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+              High-Speed Internet Connectivity
+            </li>
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+              Programming & Software Training
+            </li>
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+              Digital Learning Platforms
+            </li>
+          </ul>
+        </div>
+
+        <!-- Library -->
+        <div class="card p-8">
+          <BookOpen class="text-yellow-400 mb-6" size={48} />
+          <h3 class="text-2xl font-semibold mb-4">Library & Resource Center</h3>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-yellow-400 rounded-full mr-3"></div>
+              10,000+ Books & Reference Materials
+            </li>
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-yellow-400 rounded-full mr-3"></div>
+              Digital Library with E-Books
+            </li>
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-yellow-400 rounded-full mr-3"></div>
+              Quiet Study Areas & Reading Rooms
+            </li>
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-yellow-400 rounded-full mr-3"></div>
+              Newspapers & Magazines
+            </li>
+          </ul>
+        </div>
+
+        <!-- Sports Facilities -->
+        <div class="card p-8">
+          <Trophy class="text-red-400 mb-6" size={48} />
+          <h3 class="text-2xl font-semibold mb-4">Sports Complex</h3>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-red-400 rounded-full mr-3"></div>
+              Multi-Purpose Sports Hall
+            </li>
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-red-400 rounded-full mr-3"></div>
+              Basketball & Volleyball Courts
+            </li>
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-red-400 rounded-full mr-3"></div>
+              Cricket Ground & Football Field
+            </li>
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-red-400 rounded-full mr-3"></div>
+              Swimming Pool & Gymnasium
+            </li>
+          </ul>
+        </div>
+
+        <!-- Arts & Culture -->
+        <div class="card p-8">
+          <Palette class="text-pink-400 mb-6" size={48} />
+          <h3 class="text-2xl font-semibold mb-4">Arts & Culture</h3>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-pink-400 rounded-full mr-3"></div>
+              Art & Craft Studios
+            </li>
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-pink-400 rounded-full mr-3"></div>
+              Music Room with Instruments
+            </li>
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-pink-400 rounded-full mr-3"></div>
+              Dance Studio & Auditorium
+            </li>
+            <li class="flex items-center">
+              <div class="w-2 h-2 bg-pink-400 rounded-full mr-3"></div>
+              Drama & Theater Space
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Facilities -->
+  <section class="section-padding bg-gray-900">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="heading-2 mb-6">Additional Amenities</h2>
+        <p class="text-lead max-w-3xl mx-auto">
+          Comprehensive facilities that ensure student comfort, safety, and convenience
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="card p-6 text-center">
+          <Heart class="text-red-400 mx-auto mb-4" size={48} />
+          <h3 class="text-xl font-semibold mb-3">Medical Center</h3>
+          <p class="text-gray-300 text-sm">
+            Full-time nurse and tie-up with nearby hospitals for emergency care
+          </p>
+        </div>
+        
+        <div class="card p-6 text-center">
+          <Users class="text-blue-400 mx-auto mb-4" size={48} />
+          <h3 class="text-xl font-semibold mb-3">Cafeteria</h3>
+          <p class="text-gray-300 text-sm">
+            Hygienic food preparation with nutritious meals and snacks
+          </p>
+        </div>
+        
+        <div class="card p-6 text-center">
+          <Bus class="text-green-400 mx-auto mb-4" size={48} />
+          <h3 class="text-xl font-semibold mb-3">Transportation</h3>
+          <p class="text-gray-300 text-sm">
+            GPS-enabled buses covering all areas of the city with trained drivers
+          </p>
+        </div>
+        
+        <div class="card p-6 text-center">
+          <Shield class="text-purple-400 mx-auto mb-4" size={48} />
+          <h3 class="text-xl font-semibold mb-3">Security</h3>
+          <p class="text-gray-300 text-sm">
+            24/7 security with CCTV surveillance and controlled access
+          </p>
+        </div>
+        
+        <div class="card p-6 text-center">
+          <Wifi class="text-yellow-400 mx-auto mb-4" size={48} />
+          <h3 class="text-xl font-semibold mb-3">Wi-Fi Campus</h3>
+          <p class="text-gray-300 text-sm">
+            High-speed internet connectivity throughout the campus
+          </p>
+        </div>
+        
+        <div class="card p-6 text-center">
+          <Camera class="text-pink-400 mx-auto mb-4" size={48} />
+          <h3 class="text-xl font-semibold mb-3">Photography Studio</h3>
+          <p class="text-gray-300 text-sm">
+            Professional photography equipment for media and journalism classes
+          </p>
+        </div>
+        
+        <div class="card p-6 text-center">
+          <BookOpen class="text-orange-400 mx-auto mb-4" size={48} />
+          <h3 class="text-xl font-semibold mb-3">Study Halls</h3>
+          <p class="text-gray-300 text-sm">
+            Quiet spaces for individual and group study sessions
+          </p>
+        </div>
+        
+        <div class="card p-6 text-center">
+          <Users class="text-teal-400 mx-auto mb-4" size={48} />
+          <h3 class="text-xl font-semibold mb-3">Counseling Center</h3>
+          <p class="text-gray-300 text-sm">
+            Professional guidance and counseling services for students
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Virtual Tour CTA -->
+  <section class="section-padding bg-gray-800">
+    <div class="container-custom">
+      <div class="text-center">
+        <h2 class="heading-2 mb-6">Experience Our Campus</h2>
+        <p class="text-lead max-w-3xl mx-auto mb-8">
+          Schedule a visit to explore our world-class facilities and see how we create 
+          an inspiring learning environment for our students.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="btn-primary">Schedule a Visit</a>
+          <a href="/virtual-tour" class="btn-secondary">Virtual Tour</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

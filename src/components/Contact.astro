@@ -1,0 +1,188 @@
+---
+import { Phone, Mail, MapPin, Clock, Send } from 'lucide-astro';
+---
+
+<section class="section-padding bg-secondary-900">
+  <div class="container-custom">
+    <div class="text-center mb-12 lg:mb-16">
+      <h2 class="heading-2 mb-4 sm:mb-6">Get In Touch</h2>
+      <p class="text-lead max-w-3xl mx-auto">
+        Have questions about admissions, academics, or want to schedule a visit? 
+        We'd love to hear from you and help you on your educational journey.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
+      <!-- Contact Information -->
+      <div class="content-spacing">
+        <div class="space-y-4 sm:space-y-6">
+          <h3 class="heading-3 text-primary-400">Contact Information</h3>
+          <p class="text-secondary-300 leading-relaxed text-sm sm:text-base">
+            Reach out to us through any of the following channels. Our admissions team is ready to assist you 
+            with all your queries and guide you through the admission process.
+          </p>
+        </div>
+
+        <div class="space-y-4 sm:space-y-6">
+          <!-- Branch 1 -->
+          <div class="card p-4 sm:p-6">
+            <h4 class="text-base sm:text-lg font-semibold text-white mb-3 sm:mb-4">Branch 1 - Main Campus</h4>
+            <div class="space-y-2 sm:space-y-3">
+              <div class="flex items-start space-x-2 sm:space-x-3">
+                <MapPin size={18} class="text-primary-400 mt-0.5 sm:w-5 sm:h-5" />
+                <div>
+                  <p class="text-sm sm:text-base text-secondary-300">123 Education Street</p>
+                  <p class="text-sm sm:text-base text-secondary-300">New Delhi, India 110001</p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-2 sm:space-x-3">
+                <Phone size={18} class="text-primary-400 sm:w-5 sm:h-5" />
+                <a href="tel:+91-11-12345678" class="text-sm sm:text-base text-secondary-300 hover:text-primary-400 transition-colors">
+                  +91-11-12345678
+                </a>
+              </div>
+              <div class="flex items-center space-x-2 sm:space-x-3">
+                <Mail size={18} class="text-primary-400 sm:w-5 sm:h-5" />
+                <a href="mailto:info@paramountgrove.in" class="text-sm sm:text-base text-secondary-300 hover:text-primary-400 transition-colors">
+                  info@paramountgrove.in
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Branch 2 -->
+          <div class="card p-4 sm:p-6">
+            <h4 class="text-base sm:text-lg font-semibold text-white mb-3 sm:mb-4">Branch 2 - Secondary Campus</h4>
+            <div class="space-y-2 sm:space-y-3">
+              <div class="flex items-start space-x-2 sm:space-x-3">
+                <MapPin size={18} class="text-primary-400 mt-0.5 sm:w-5 sm:h-5" />
+                <div>
+                  <p class="text-sm sm:text-base text-secondary-300">456 Learning Avenue</p>
+                  <p class="text-sm sm:text-base text-secondary-300">New Delhi, India 110002</p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-2 sm:space-x-3">
+                <Phone size={18} class="text-primary-400 sm:w-5 sm:h-5" />
+                <a href="tel:+91-11-87654321" class="text-sm sm:text-base text-secondary-300 hover:text-primary-400 transition-colors">
+                  +91-11-87654321
+                </a>
+              </div>
+              <div class="flex items-center space-x-2 sm:space-x-3">
+                <Mail size={18} class="text-primary-400 sm:w-5 sm:h-5" />
+                <a href="mailto:branch2@paramountgrove.in" class="text-sm sm:text-base text-secondary-300 hover:text-primary-400 transition-colors">
+                  branch2@paramountgrove.in
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Office Hours -->
+          <div class="card p-4 sm:p-6">
+            <h4 class="text-base sm:text-lg font-semibold text-white mb-3 sm:mb-4">Office Hours</h4>
+            <div class="space-y-2 sm:space-y-3">
+              <div class="flex items-start space-x-2 sm:space-x-3">
+                <Clock size={18} class="text-primary-400 mt-0.5 sm:w-5 sm:h-5" />
+                <div>
+                  <p class="text-sm sm:text-base text-secondary-300">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                  <p class="text-sm sm:text-base text-secondary-300">Saturday: 9:00 AM - 1:00 PM</p>
+                  <p class="text-sm sm:text-base text-secondary-300">Sunday: Closed</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="card p-6 sm:p-8">
+        <h3 class="heading-3 text-primary-400 mb-4 sm:mb-6">Send us a Message</h3>
+        <form class="space-y-4 sm:space-y-6" action="#" method="POST">
+          <div class="grid sm:grid-cols-2 gap-4 sm:gap-6">
+            <div>
+              <label for="firstName" class="block text-sm font-medium text-secondary-300 mb-2">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                required
+                class="w-full px-3 py-2 sm:px-4 sm:py-3 bg-secondary-800 border border-secondary-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors text-white placeholder-secondary-400 text-sm sm:text-base"
+                placeholder="Enter your first name"
+              />
+            </div>
+            <div>
+              <label for="lastName" class="block text-sm font-medium text-secondary-300 mb-2">Last Name</label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                required
+                class="w-full px-3 py-2 sm:px-4 sm:py-3 bg-secondary-800 border border-secondary-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors text-white placeholder-secondary-400 text-sm sm:text-base"
+                placeholder="Enter your last name"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-secondary-300 mb-2">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full px-3 py-2 sm:px-4 sm:py-3 bg-secondary-800 border border-secondary-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors text-white placeholder-secondary-400 text-sm sm:text-base"
+              placeholder="Enter your email address"
+            />
+          </div>
+
+          <div>
+            <label for="phone" class="block text-sm font-medium text-secondary-300 mb-2">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              class="w-full px-3 py-2 sm:px-4 sm:py-3 bg-secondary-800 border border-secondary-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors text-white placeholder-secondary-400 text-sm sm:text-base"
+              placeholder="Enter your phone number"
+            />
+          </div>
+
+          <div>
+            <label for="subject" class="block text-sm font-medium text-secondary-300 mb-2">Subject</label>
+            <select
+              id="subject"
+              name="subject"
+              required
+              class="w-full px-3 py-2 sm:px-4 sm:py-3 bg-secondary-800 border border-secondary-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors text-white text-sm sm:text-base"
+            >
+              <option value="">Select a subject</option>
+              <option value="admission">Admission Enquiry</option>
+              <option value="academic">Academic Information</option>
+              <option value="facilities">Facilities & Infrastructure</option>
+              <option value="fees">Fees & Scholarships</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-secondary-300 mb-2">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              required
+              class="w-full px-3 py-2 sm:px-4 sm:py-3 bg-secondary-800 border border-secondary-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors resize-none text-white placeholder-secondary-400 text-sm sm:text-base"
+              placeholder="Tell us about your enquiry..."
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="btn-primary w-full group justify-center"
+          >
+            Send Message
+            <Send size={18} class="ml-2 group-hover:translate-x-1 transition-transform sm:w-5 sm:h-5" />
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

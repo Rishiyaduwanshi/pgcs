@@ -1,0 +1,287 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare, Calendar } from 'lucide-astro';
+---
+
+<Layout title="Contact Us - PGCS" description="Get in touch with Paramount Grove Convent School. Find our contact information, address, and reach out for admissions or inquiries.">
+  <Navigation />
+  
+  <!-- Hero Section -->
+  <section class="section-padding bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden">
+    <div class="absolute inset-0 bg-mesh opacity-30"></div>
+    <div class="container-custom relative z-10">
+      <div class="text-center">
+        <h1 class="heading-1 mb-6 text-glow">Contact Us</h1>
+        <p class="text-lead max-w-4xl mx-auto">
+          We'd love to hear from you. Get in touch with us for admissions, 
+          inquiries, or to schedule a visit to our campus.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Information -->
+  <section class="section-padding bg-gray-800">
+    <div class="container-custom">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Address -->
+        <div class="card p-6 text-center">
+          <MapPin class="text-blue-400 mx-auto mb-4" size={48} />
+          <h3 class="text-xl font-semibold mb-3">Visit Us</h3>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Paramount Grove Convent School<br>
+            123 Education Lane<br>
+            Sector 15, New Delhi<br>
+            India - 110001
+          </p>
+        </div>
+
+        <!-- Phone -->
+        <div class="card p-6 text-center">
+          <Phone class="text-green-400 mx-auto mb-4" size={48} />
+          <h3 class="text-xl font-semibold mb-3">Call Us</h3>
+          <div class="space-y-2 text-gray-300 text-sm">
+            <p>Main Office: <a href="tel:+91-11-12345678" class="text-green-400 hover:text-green-300">+91-11-12345678</a></p>
+            <p>Admissions: <a href="tel:+91-11-12345679" class="text-green-400 hover:text-green-300">+91-11-12345679</a></p>
+            <p>Emergency: <a href="tel:+91-11-12345680" class="text-green-400 hover:text-green-300">+91-11-12345680</a></p>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="card p-6 text-center">
+          <Mail class="text-purple-400 mx-auto mb-4" size={48} />
+          <h3 class="text-xl font-semibold mb-3">Email Us</h3>
+          <div class="space-y-2 text-gray-300 text-sm">
+            <p><a href="mailto:info@pgcs.edu.in" class="text-purple-400 hover:text-purple-300">info@pgcs.edu.in</a></p>
+            <p><a href="mailto:admissions@pgcs.edu.in" class="text-purple-400 hover:text-purple-300">admissions@pgcs.edu.in</a></p>
+            <p><a href="mailto:principal@pgcs.edu.in" class="text-purple-400 hover:text-purple-300">principal@pgcs.edu.in</a></p>
+          </div>
+        </div>
+
+        <!-- Hours -->
+        <div class="card p-6 text-center">
+          <Clock class="text-yellow-400 mx-auto mb-4" size={48} />
+          <h3 class="text-xl font-semibold mb-3">Office Hours</h3>
+          <div class="space-y-2 text-gray-300 text-sm">
+            <p><strong>Monday - Friday:</strong><br>8:00 AM - 4:00 PM</p>
+            <p><strong>Saturday:</strong><br>9:00 AM - 1:00 PM</p>
+            <p><strong>Sunday:</strong><br>Closed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="section-padding bg-gray-900">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="heading-2 mb-6">Send Us a Message</h2>
+          <p class="text-lead max-w-2xl mx-auto">
+            Have a question or want to schedule a visit? Fill out the form below and we'll get back to you soon.
+          </p>
+        </div>
+        
+        <div class="card p-8">
+          <form class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label for="firstName" class="block text-sm font-medium text-gray-300 mb-2">First Name *</label>
+                <div class="relative">
+                  <User class="absolute left-3 top-3 text-gray-400" size={20} />
+                  <input 
+                    type="text" 
+                    id="firstName" 
+                    name="firstName" 
+                    required
+                    class="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-blue-400 focus:ring-1 focus:ring-blue-400 text-white placeholder-gray-400"
+                    placeholder="Enter your first name"
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <label for="lastName" class="block text-sm font-medium text-gray-300 mb-2">Last Name *</label>
+                <div class="relative">
+                  <User class="absolute left-3 top-3 text-gray-400" size={20} />
+                  <input 
+                    type="text" 
+                    id="lastName" 
+                    name="lastName" 
+                    required
+                    class="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-blue-400 focus:ring-1 focus:ring-blue-400 text-white placeholder-gray-400"
+                    placeholder="Enter your last name"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address *</label>
+                <div class="relative">
+                  <Mail class="absolute left-3 top-3 text-gray-400" size={20} />
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required
+                    class="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-blue-400 focus:ring-1 focus:ring-blue-400 text-white placeholder-gray-400"
+                    placeholder="Enter your email address"
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
+                <div class="relative">
+                  <Phone class="absolute left-3 top-3 text-gray-400" size={20} />
+                  <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone"
+                    class="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-blue-400 focus:ring-1 focus:ring-blue-400 text-white placeholder-gray-400"
+                    placeholder="Enter your phone number"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">Subject *</label>
+              <select 
+                id="subject" 
+                name="subject" 
+                required
+                class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-blue-400 focus:ring-1 focus:ring-blue-400 text-white"
+              >
+                <option value="">Select a subject</option>
+                <option value="admissions">Admissions Inquiry</option>
+                <option value="general">General Information</option>
+                <option value="facilities">Facilities Tour</option>
+                <option value="academics">Academic Programs</option>
+                <option value="careers">Career Opportunities</option>
+                <option value="feedback">Feedback</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message *</label>
+              <div class="relative">
+                <MessageSquare class="absolute left-3 top-3 text-gray-400" size={20} />
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  rows="6" 
+                  required
+                  class="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-blue-400 focus:ring-1 focus:ring-blue-400 text-white placeholder-gray-400 resize-none"
+                  placeholder="Tell us about your inquiry or how we can help you..."
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="text-center">
+              <button 
+                type="submit" 
+                class="btn-primary inline-flex items-center px-8 py-3"
+              >
+                <Send class="mr-2" size={20} />
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="section-padding bg-gray-800">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="heading-2 mb-6">Find Us</h2>
+        <p class="text-lead max-w-2xl mx-auto">
+          Located in the heart of New Delhi, our campus is easily accessible by public transport and private vehicles.
+        </p>
+      </div>
+      
+      <div class="card p-2">
+        <div class="bg-gray-700 rounded-lg h-96 flex items-center justify-center">
+          <div class="text-center">
+            <MapPin class="text-blue-400 mx-auto mb-4" size={48} />
+            <p class="text-gray-300 mb-2">Interactive Map</p>
+            <p class="text-gray-400 text-sm">
+              123 Education Lane, Sector 15, New Delhi, India - 110001
+            </p>
+            <a href="https://maps.google.com" target="_blank" class="text-blue-400 hover:text-blue-300 text-sm">
+              View on Google Maps →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Actions -->
+  <section class="section-padding bg-gray-900">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="heading-2 mb-6">Quick Actions</h2>
+        <p class="text-lead max-w-2xl mx-auto">
+          Need something specific? Here are some quick actions to help you get started.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="card p-6 text-center">
+          <Calendar class="text-blue-400 mx-auto mb-4" size={48} />
+          <h3 class="text-xl font-semibold mb-3">Schedule a Visit</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Book a campus tour and see our facilities firsthand.
+          </p>
+          <a href="/visit" class="btn-primary">Book Tour</a>
+        </div>
+
+        <div class="card p-6 text-center">
+          <User class="text-green-400 mx-auto mb-4" size={48} />
+          <h3 class="text-xl font-semibold mb-3">Admissions</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Start your child's journey with us. Apply for admission today.
+          </p>
+          <a href="/admissions" class="btn-accent">Apply Now</a>
+        </div>
+
+        <div class="card p-6 text-center">
+          <MessageSquare class="text-purple-400 mx-auto mb-4" size={48} />
+          <h3 class="text-xl font-semibold mb-3">Ask a Question</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Have a specific question? Our team is here to help.
+          </p>
+          <a href="#contact-form" class="btn-secondary">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script>
+  // Add smooth scrolling for contact form link
+  document.addEventListener('DOMContentLoaded', function() {
+    const contactLink = document.querySelector('a[href="#contact-form"]');
+    if (contactLink) {
+      contactLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        const form = document.querySelector('form');
+        if (form) {
+          form.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
+  });
+</script>

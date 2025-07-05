@@ -1,0 +1,26 @@
+---
+import { cn } from '../../lib/utils';
+
+const { variant = 'default', size = 'md', class: className, ...props } = Astro.props;
+
+const cardVariants = {
+  default: 'bg-gray-800/60 backdrop-blur-sm border border-gray-700 text-white',
+  secondary: 'bg-gray-700/50 backdrop-blur-sm border border-gray-600 text-white',
+  accent: 'bg-blue-900/30 backdrop-blur-sm border border-blue-700 text-white'
+};
+
+const cardSizes = {
+  sm: 'p-4 rounded-lg',
+  md: 'p-6 rounded-xl',
+  lg: 'p-8 rounded-2xl'
+};
+---
+
+<div class={cn(
+  'shadow-xl hover:shadow-2xl transition-all duration-300',
+  cardVariants[variant],
+  cardSizes[size],
+  className
+)} {...props}>
+  <slot />
+</div>

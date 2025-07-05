@@ -1,0 +1,217 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import { Calendar, FileText, Users, CheckCircle, AlertCircle, Clock } from 'lucide-astro';
+---
+
+<Layout title="Admissions - PGCS" description="Join Paramount Grove Convent School. Learn about our admission process, requirements, and start your journey to academic excellence.">
+  <Navigation />
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-primary-600 to-secondary-600 text-white py-20">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          Join Our School Community
+        </h1>
+        <p class="text-xl md:text-2xl text-blue-100 mb-8">
+          Begin your child's journey to academic excellence and personal growth with us
+        </p>
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 inline-block">
+          <div class="flex items-center justify-center space-x-2 text-accent-300">
+            <AlertCircle size={24} />
+            <span class="text-lg font-semibold">Admissions Open for 2025-26</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admission Process -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="heading-2 mb-6">Admission Process</h2>
+        <p class="text-lead max-w-3xl mx-auto">
+          Our admission process is designed to be simple and transparent. Follow these steps to secure your child's place at PGCS.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <FileText size={32} class="text-primary-600" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">1. Application</h3>
+          <p class="text-gray-600">Fill out the online application form with required documents</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Users size={32} class="text-secondary-600" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">2. Interview</h3>
+          <p class="text-gray-600">Attend a personal interview with our admissions team</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <CheckCircle size={32} class="text-accent-600" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">3. Assessment</h3>
+          <p class="text-gray-600">Complete age-appropriate assessment (for applicable grades)</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Calendar size={32} class="text-primary-600" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">4. Enrollment</h3>
+          <p class="text-gray-600">Receive confirmation and complete enrollment formalities</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Requirements & Documents -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom">
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div>
+          <h2 class="heading-3 mb-6">Required Documents</h2>
+          <div class="space-y-4">
+            <div class="flex items-start space-x-3">
+              <CheckCircle size={20} class="text-accent-600 mt-1" />
+              <div>
+                <h4 class="font-semibold">Birth Certificate</h4>
+                <p class="text-gray-600 text-sm">Original and photocopy of birth certificate</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-3">
+              <CheckCircle size={20} class="text-accent-600 mt-1" />
+              <div>
+                <h4 class="font-semibold">Previous School Records</h4>
+                <p class="text-gray-600 text-sm">Transfer certificate and mark sheets (if applicable)</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-3">
+              <CheckCircle size={20} class="text-accent-600 mt-1" />
+              <div>
+                <h4 class="font-semibold">Passport Size Photos</h4>
+                <p class="text-gray-600 text-sm">Recent passport size photographs of student and parents</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-3">
+              <CheckCircle size={20} class="text-accent-600 mt-1" />
+              <div>
+                <h4 class="font-semibold">Identity Proof</h4>
+                <p class="text-gray-600 text-sm">Aadhar card or passport of student and parents</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-3">
+              <CheckCircle size={20} class="text-accent-600 mt-1" />
+              <div>
+                <h4 class="font-semibold">Address Proof</h4>
+                <p class="text-gray-600 text-sm">Utility bill or rental agreement</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="heading-3 mb-6">Age Requirements</h2>
+          <div class="space-y-4">
+            <div class="card p-4">
+              <div class="flex justify-between items-center">
+                <span class="font-semibold">Pre-Primary</span>
+                <span class="text-primary-600">3-4 years</span>
+              </div>
+            </div>
+            <div class="card p-4">
+              <div class="flex justify-between items-center">
+                <span class="font-semibold">Class 1</span>
+                <span class="text-primary-600">5-6 years</span>
+              </div>
+            </div>
+            <div class="card p-4">
+              <div class="flex justify-between items-center">
+                <span class="font-semibold">Class 2-5</span>
+                <span class="text-primary-600">Age as per class</span>
+              </div>
+            </div>
+            <div class="card p-4">
+              <div class="flex justify-between items-center">
+                <span class="font-semibold">Class 6-8</span>
+                <span class="text-primary-600">Age as per class</span>
+              </div>
+            </div>
+            <div class="card p-4">
+              <div class="flex justify-between items-center">
+                <span class="font-semibold">Class 9-12</span>
+                <span class="text-primary-600">Age as per class</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Important Dates -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="heading-2 mb-6">Important Dates</h2>
+        <p class="text-lead max-w-3xl mx-auto">
+          Mark your calendar with these important admission dates and deadlines.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="card p-6 text-center">
+          <Clock size={32} class="text-primary-600 mx-auto mb-4" />
+          <h3 class="text-xl font-semibold mb-2">Application Opens</h3>
+          <p class="text-2xl font-bold text-primary-600 mb-2">January 15, 2025</p>
+          <p class="text-gray-600">Online application portal opens</p>
+        </div>
+
+        <div class="card p-6 text-center">
+          <Calendar size={32} class="text-secondary-600 mx-auto mb-4" />
+          <h3 class="text-xl font-semibold mb-2">Application Deadline</h3>
+          <p class="text-2xl font-bold text-secondary-600 mb-2">March 15, 2025</p>
+          <p class="text-gray-600">Last date to submit applications</p>
+        </div>
+
+        <div class="card p-6 text-center">
+          <Users size={32} class="text-accent-600 mx-auto mb-4" />
+          <h3 class="text-xl font-semibold mb-2">Results Announced</h3>
+          <p class="text-2xl font-bold text-accent-600 mb-2">April 30, 2025</p>
+          <p class="text-gray-600">Admission results will be published</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-padding bg-primary-600 text-white">
+    <div class="container-custom">
+      <div class="text-center">
+        <h2 class="heading-2 mb-6">Ready to Begin Your Journey?</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">
+          Join thousands of successful students who have started their educational journey with us.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://entrance.paramountgrove.in/" class="btn bg-white text-primary-600 hover:bg-gray-50">
+            Check Entrance Results
+          </a>
+          <a href="/contact" class="btn border-2 border-white text-white hover:bg-white hover:text-primary-600">
+            Contact Admissions
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
