@@ -2,30 +2,42 @@
 import { Menu, X, ChevronDown } from 'lucide-astro';
 ---
 
-<header class="sticky top-0 z-50 glass-effect border-b border-white/10">
-  <nav class="container-custom">
+<header class="sticky top-0 z-50 glass-effect border-b border-white/10 w-full">
+  <nav class="container-custom bg-secondary-900">
     <div class="flex items-center justify-between h-16 lg:h-20">
       <!-- Logo -->
       <div class="flex items-center">
         <a href="/" class="flex items-center space-x-3 group">
-          <div class="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center transition-transform group-hover:scale-105">
-            <span class="text-white font-bold text-lg lg:text-xl">PGCS</span>
+          <div class="w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg p-1">
+            <img 
+              src="/images/bg-removed-logo.png" 
+              alt="PGCS Logo" 
+              class="w-full h-full object-contain rounded-lg"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="w-full h-full hidden items-center justify-center bg-gradient-to-br from-primary-600 to-accent-600 rounded-lg">
+              <span class="text-white font-bold text-lg lg:text-xl">PGCS</span>
+            </div>
           </div>
           <div class="hidden sm:block">
             <h1 class="text-lg lg:text-xl font-bold text-white group-hover:text-primary-400 transition-colors">PGCS</h1>
-            <p class="text-xs lg:text-sm text-secondary-400">Paramount Grove Convent School</p>
+            <p class="text-xs lg:text-sm text-secondary-400">Creating a Brighter Future</p>
           </div>
         </a>
       </div>
 
       <!-- Desktop Navigation -->
       <div class="hidden lg:flex items-center space-x-8">
-        <a href="/" class="text-secondary-300 hover:text-primary-400 font-medium transition-colors">Home</a>
+        <a href="/" class="text-secondary-300 hover:text-primary-400 font-medium transition-colors relative group">
+          Home
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
         
         <div class="relative group">
-          <button class="flex items-center space-x-1 text-secondary-300 hover:text-primary-400 font-medium transition-colors">
+          <button class="flex items-center space-x-1 text-secondary-300 hover:text-primary-400 font-medium transition-colors relative">
             <span>About</span>
             <ChevronDown size={16} class="group-hover:rotate-180 transition-transform" />
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-400 transition-all duration-300 group-hover:w-full"></span>
           </button>
           <div class="absolute top-full left-0 mt-2 w-48 glass-effect border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
             <a href="/about" class="block px-4 py-3 text-secondary-300 hover:bg-white/10 hover:text-primary-400 transition-colors first:rounded-t-xl">About Us</a>
@@ -35,15 +47,38 @@ import { Menu, X, ChevronDown } from 'lucide-astro';
           </div>
         </div>
 
-        <a href="/admissions" class="text-secondary-300 hover:text-primary-400 font-medium transition-colors">Admissions</a>
-        <a href="/facilities" class="text-secondary-300 hover:text-primary-400 font-medium transition-colors">Facilities</a>
-        <a href="/contact" class="text-secondary-300 hover:text-primary-400 font-medium transition-colors">Contact</a>
+        <a href="/admissions" class="text-secondary-300 hover:text-primary-400 font-medium transition-colors relative group">
+          Admissions
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="/facilities" class="text-secondary-300 hover:text-primary-400 font-medium transition-colors relative group">
+          Facilities
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="/contact" class="text-secondary-300 hover:text-primary-400 font-medium transition-colors relative group">
+          Contact
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
       </div>
 
-      <!-- CTA Button -->
+      <!-- Enhanced CTA Button -->
       <div class="hidden lg:block">
-        <a href="/admissions" class="btn-primary">
-          Apply Now
+        <a href="/admissions" class="relative inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-primary-600 via-primary-500 to-accent-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group overflow-hidden">
+          <!-- Animated background -->
+          <div class="absolute inset-0 bg-gradient-to-r from-accent-600 via-primary-500 to-primary-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          
+          <!-- Button content -->
+          <span class="relative z-10 flex items-center">
+            Apply Now
+            <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </span>
+          
+          <!-- Shine effect -->
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+          </div>
         </a>
       </div>
 
@@ -58,15 +93,34 @@ import { Menu, X, ChevronDown } from 'lucide-astro';
     </div>
 
     <!-- Mobile Navigation -->
-    <div class="lg:hidden border-t border-white/10 hidden" id="mobile-menu">
+    <div class="lg:hidden border-t border-white/10 hidden bg-secondary-900/95 backdrop-blur-sm" id="mobile-menu">
       <div class="py-4 space-y-1">
         <a href="/" class="block px-4 py-3 text-secondary-300 hover:bg-white/10 hover:text-primary-400 transition-colors rounded-lg mx-2">Home</a>
         <a href="/about" class="block px-4 py-3 text-secondary-300 hover:bg-white/10 hover:text-primary-400 transition-colors rounded-lg mx-2">About Us</a>
+        <a href="/history" class="block px-4 py-3 text-secondary-300 hover:bg-white/10 hover:text-primary-400 transition-colors rounded-lg mx-2">Our History</a>
+        <a href="/mission" class="block px-4 py-3 text-secondary-300 hover:bg-white/10 hover:text-primary-400 transition-colors rounded-lg mx-2">Mission & Vision</a>
+        <a href="/faculty" class="block px-4 py-3 text-secondary-300 hover:bg-white/10 hover:text-primary-400 transition-colors rounded-lg mx-2">Faculty</a>
         <a href="/admissions" class="block px-4 py-3 text-secondary-300 hover:bg-white/10 hover:text-primary-400 transition-colors rounded-lg mx-2">Admissions</a>
         <a href="/facilities" class="block px-4 py-3 text-secondary-300 hover:bg-white/10 hover:text-primary-400 transition-colors rounded-lg mx-2">Facilities</a>
         <a href="/contact" class="block px-4 py-3 text-secondary-300 hover:bg-white/10 hover:text-primary-400 transition-colors rounded-lg mx-2">Contact</a>
         <div class="px-4 py-2">
-          <a href="/admissions" class="btn-primary w-full">Apply Now</a>
+          <a href="/admissions" class="relative inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-primary-600 to-accent-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group overflow-hidden">
+            <!-- Animated background -->
+            <div class="absolute inset-0 bg-gradient-to-r from-accent-600 to-primary-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Button content -->
+            <span class="relative z-10 flex items-center">
+              Apply Now
+              <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </span>
+            
+            <!-- Shine effect -->
+            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+            </div>
+          </a>
         </div>
       </div>
     </div>
